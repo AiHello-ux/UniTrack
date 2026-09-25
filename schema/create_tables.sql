@@ -1,0 +1,27 @@
+-- ============================================================
+-- UniTrack: Student, Course and Academic Management Database
+-- schema/create_tables.sql
+--
+-- DDL statements to create the database, tables, and constraints.
+-- Owner: Nandu (logical design) + Monica (constraints, final DDL)
+-- Melvin: final review before this is run/committed
+--
+-- Fill in CREATE TABLE statements below, one per suggested table
+-- (add/remove/rename tables as your final design needs, and note
+-- any change in docs/ as required by the project doc).
+-- ============================================================
+
+-- CREATE DATABASE unitrack;
+-- USE unitrack;
+
+-- TODO: departments
+-- TODO: programs
+-- TODO: students
+-- TODO: faculty
+-- TODO: courses
+-- TODO: classrooms
+-- TODO: course_offerings
+-- TODO: enrollments
+-- TODO: attendance
+-- TODO: assignments
+-- TODO: submissions

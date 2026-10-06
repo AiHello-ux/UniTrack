@@ -1,15 +1,12 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniTrack — Comprehensive Academic Project Report (DBMS Team 4)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #0f2444;
@@ -222,8 +219,7 @@
             font-size: 0.96rem;
         }
 
-        .section-card ul,
-        .section-card ol {
+        .section-card ul, .section-card ol {
             margin: 12px 0 18px 24px;
             color: var(--text-main);
             font-size: 0.96rem;
@@ -319,26 +315,10 @@
             letter-spacing: 0.5px;
         }
 
-        .badge-pk {
-            background: #fee2e2;
-            color: #991b1b;
-        }
-
-        .badge-fk {
-            background: #dbeafe;
-            color: #1e40af;
-        }
-
-        .badge-unique {
-            background: #fef3c7;
-            color: #92400e;
-        }
-
-        .badge-count {
-            background: #dcfce7;
-            color: #166534;
-            font-weight: 800;
-        }
+        .badge-pk { background: #fee2e2; color: #991b1b; }
+        .badge-fk { background: #dbeafe; color: #1e40af; }
+        .badge-unique { background: #fef3c7; color: #92400e; }
+        .badge-count { background: #dcfce7; color: #166534; font-weight: 800; }
 
         /* Images / Diagrams */
         .figure-box {
@@ -487,25 +467,19 @@
 
         /* Print Media */
         @media print {
-
-            .site-header,
-            .site-footer {
+            .site-header, .site-footer {
                 display: none;
             }
-
             body {
                 background: #ffffff;
                 color: #000000;
             }
-
             .page-container {
                 max-width: 100%;
                 margin: 0;
                 padding: 0;
             }
-
-            .section-card,
-            .query-box {
+            .section-card, .query-box {
                 border: 1px solid #ccc;
                 box-shadow: none;
                 page-break-inside: avoid;
@@ -513,114 +487,110 @@
         }
     </style>
 </head>
-
 <body>
 
     <!-- TOP ACADEMIC NAVIGATION BAR -->
-    <header class="site-header">
-        <div class="header-inner">
-            <a href="#" class="brand-logo">
-                <span>🏛️ UniTrack</span>
-                <span class="brand-badge">DBMS Final Report</span>
-            </a>
-            <nav class="nav-links">
-                <a href="#overview">Overview</a>
-                <a href="#requirements">Requirements</a>
-                <a href="#er-model">ER Model</a>
-                <a href="#schema">Schema</a>
-                <a href="#normalization">3NF</a>
-                <a href="#data-summary">Data</a>
-                <a href="#queries">SQL Queries (Q1–Q10)</a>
-                <a href="#verification">Testing</a>
-                <a href="#team">Team 4</a>
-            </nav>
-        </div>
-    </header>
+<header class="site-header">
+    <div class="header-inner">
+        <a href="#" class="brand-logo">
+            <span>🏛️ UniTrack</span>
+            <span class="brand-badge">DBMS Final Report</span>
+        </a>
+        <nav class="nav-links">
+            <a href="#overview">Overview</a>
+            <a href="#requirements">Requirements</a>
+            <a href="#er-model">ER Model</a>
+            <a href="#schema">Schema</a>
+            <a href="#normalization">3NF</a>
+            <a href="#data-summary">Data</a>
+            <a href="#queries">SQL Queries (Q1–Q10)</a>
+            <a href="#verification">Testing</a>
+            <a href="#team">Team 4</a>
+        </nav>
+    </div>
+</header>
 
-    <div class="page-container">
+<div class="page-container">
 
-        <!-- HERO DOCUMENT BANNER -->
-        <div class="hero-banner" id="overview">
-            <h1>UNITRACK DATABASE SYSTEM</h1>
-            <div class="subtitle">Relational Database for University Academic Management</div>
-            <div class="hero-meta-grid">
-                <div class="hero-meta-item">
-                    <strong>Course & Term</strong>
-                    <span>DBMS (2024–2025)</span>
-                </div>
-                <div class="hero-meta-item">
-                    <strong>RDBMS Engine</strong>
-                    <span>MySQL 8.0+ (InnoDB)</span>
-                </div>
-                <div class="hero-meta-item">
-                    <strong>Normalization Level</strong>
-                    <span>Third Normal Form (3NF)</span>
-                </div>
-                <div class="hero-meta-item">
-                    <strong>Scale & Scope</strong>
-                    <span>11 Tables • 14 FKs • 3,416 Rows</span>
-                </div>
+    <!-- HERO DOCUMENT BANNER -->
+    <div class="hero-banner" id="overview">
+        <h1>UNITRACK DATABASE SYSTEM</h1>
+        <div class="subtitle">Relational Database for University Academic Management</div>
+        <div class="hero-meta-grid">
+            <div class="hero-meta-item">
+                <strong>Course & Term</strong>
+                <span>DBMS (2024–2025)</span>
+            </div>
+            <div class="hero-meta-item">
+                <strong>RDBMS Engine</strong>
+                <span>MySQL 8.0+ (InnoDB)</span>
+            </div>
+            <div class="hero-meta-item">
+                <strong>Normalization Level</strong>
+                <span>Third Normal Form (3NF)</span>
+            </div>
+            <div class="hero-meta-item">
+                <strong>Scale & Scope</strong>
+                <span>11 Tables • 14 FKs • 3,416 Rows</span>
             </div>
         </div>
+    </div>
 
-        <!-- TABLE OF CONTENTS -->
-        <section class="section-card">
-            <h2>📑 Table of Contents</h2>
-            <div class="toc-grid">
-                <a href="#overview-section" class="toc-link"><span class="toc-num">01</span> Project Overview</a>
-                <a href="#problem-scope" class="toc-link"><span class="toc-num">02</span> Problem Statement & Scope</a>
-                <a href="#requirements" class="toc-link"><span class="toc-num">03</span> System Requirements & Rules</a>
-                <a href="#er-model" class="toc-link"><span class="toc-num">04</span> ER Modeling & Conceptual Design</a>
-                <a href="#schema" class="toc-link"><span class="toc-num">05</span> Relational Schema & Data
-                    Dictionary</a>
-                <a href="#design-decisions" class="toc-link"><span class="toc-num">06</span> Key Design Decisions</a>
-                <a href="#normalization" class="toc-link"><span class="toc-num">07</span> Database Normalization
-                    (1NF–3NF)</a>
-                <a href="#data-summary" class="toc-link"><span class="toc-num">08</span> Implementation & Data
-                    Summary</a>
-                <a href="#queries" class="toc-link"><span class="toc-num">09</span> SQL Queries & Results (Q1–Q10)</a>
-                <a href="#verification" class="toc-link"><span class="toc-num">10</span> Testing & Integrity Checks</a>
-                <a href="#conclusion" class="toc-link"><span class="toc-num">11</span> Conclusion & Future Work</a>
-                <a href="#team" class="toc-link"><span class="toc-num">12</span> Team Contributions</a>
-            </div>
-        </section>
+    <!-- TABLE OF CONTENTS -->
+    <section class="section-card">
+        <h2>📑 Table of Contents</h2>
+        <div class="toc-grid">
+            <a href="#overview-section" class="toc-link"><span class="toc-num">01</span> Project Overview</a>
+            <a href="#problem-scope" class="toc-link"><span class="toc-num">02</span> Problem Statement & Scope</a>
+            <a href="#requirements" class="toc-link"><span class="toc-num">03</span> System Requirements & Rules</a>
+            <a href="#er-model" class="toc-link"><span class="toc-num">04</span> ER Modeling & Conceptual Design</a>
+            <a href="#schema" class="toc-link"><span class="toc-num">05</span> Relational Schema & Data Dictionary</a>
+            <a href="#design-decisions" class="toc-link"><span class="toc-num">06</span> Key Design Decisions</a>
+            <a href="#normalization" class="toc-link"><span class="toc-num">07</span> Database Normalization
+                (1NF–3NF)</a>
+            <a href="#data-summary" class="toc-link"><span class="toc-num">08</span> Implementation & Data Summary</a>
+            <a href="#queries" class="toc-link"><span class="toc-num">09</span> SQL Queries & Results (Q1–Q10)</a>
+            <a href="#verification" class="toc-link"><span class="toc-num">10</span> Testing & Integrity Checks</a>
+            <a href="#conclusion" class="toc-link"><span class="toc-num">11</span> Conclusion & Future Work</a>
+            <a href="#team" class="toc-link"><span class="toc-num">12</span> Team Contributions</a>
+        </div>
+    </section>
 
-        <!-- 1. PROJECT OVERVIEW -->
-        <section class="section-card" id="overview-section">
-            <h2>1. Project Overview</h2>
-            <p>Colleges handle many everyday activities—managing departments, degree programs, teachers, classrooms,
-                student admissions, course enrollments, attendance, and assignment marks.</p>
-            <p>When this information is kept in Excel sheets or unorganized tables, common problems happen:</p>
-            <ul>
-                <li>The same data is entered multiple times (duplicate data).</li>
-                <li>Updating a teacher's or student's details in one place leaves old data in another place.</li>
-                <li>Deleting an entry can accidentally delete important linked information.</li>
-            </ul>
-            <p><strong>UniTrack</strong> is a centralized relational database built using <strong>MySQL 8.0+</strong>.
-                It organizes all university data into <strong>11 clean tables</strong> normalized to <strong>Third
-                    Normal Form (3NF)</strong>. It ensures that data remains correct, relationships stay valid using 14
-                foreign keys, and college staff can quickly get answers to important academic questions using SQL
-                queries.</p>
-        </section>
+    <!-- 1. PROJECT OVERVIEW -->
+    <section class="section-card" id="overview-section">
+        <h2>1. Project Overview</h2>
+        <p>Colleges handle many everyday activities—managing departments, degree programs, teachers, classrooms, student
+            admissions, course enrollments, attendance, and assignment marks.</p>
+        <p>When this information is kept in Excel sheets or unorganized tables, common problems happen:</p>
+        <ul>
+            <li>The same data is entered multiple times (duplicate data).</li>
+            <li>Updating a teacher's or student's details in one place leaves old data in another place.</li>
+            <li>Deleting an entry can accidentally delete important linked information.</li>
+        </ul>
+        <p><strong>UniTrack</strong> is a centralized relational database built using <strong>MySQL 8.0+</strong>. It
+            organizes all university data into <strong>11 clean tables</strong> normalized to <strong>Third Normal Form
+                (3NF)</strong>. It ensures that data remains correct, relationships stay valid using 14 foreign keys,
+            and college staff can quickly get answers to important academic questions using SQL queries.</p>
+    </section>
 
-        <!-- 2. PROBLEM STATEMENT & SCOPE -->
-        <section class="section-card" id="problem-scope">
-            <h2>2. Problem Statement & Scope</h2>
-            <h3>2.1 Common Problems in Manual / Excel Systems</h3>
-            <ol>
-                <li><strong>Repeated Data:</strong> Student and teacher details get retyped in multiple sheets, leading
-                    to spelling differences and mismatching data.</li>
-                <li><strong>Missing Links:</strong> If a course is removed, old attendance or grade records are left
-                    behind with no valid course attached.</li>
-                <li><strong>Wrong Attendance:</strong> Attendance might get marked for a student who never enrolled in
-                    that subject.</li>
-                <li><strong>Course Confusion:</strong> Re-entering course name, syllabus, and credits every semester
-                    instead of keeping one master course list.</li>
-            </ol>
+    <!-- 2. PROBLEM STATEMENT & SCOPE -->
+    <section class="section-card" id="problem-scope">
+        <h2>2. Problem Statement & Scope</h2>
+        <h3>2.1 Common Problems in Manual / Excel Systems</h3>
+        <ol>
+            <li><strong>Repeated Data:</strong> Student and teacher details get retyped in multiple sheets, leading to
+                spelling differences and mismatching data.</li>
+            <li><strong>Missing Links:</strong> If a course is removed, old attendance or grade records are left behind
+                with no valid course attached.</li>
+            <li><strong>Wrong Attendance:</strong> Attendance might get marked for a student who never enrolled in that
+                subject.</li>
+            <li><strong>Course Confusion:</strong> Re-entering course name, syllabus, and credits every semester instead
+                of keeping one master course list.</li>
+        </ol>
 
-            <h3>2.2 UniTrack Solution Modules</h3>
-            <p>The project organizes the university ecosystem into four cohesive modules:</p>
-            <pre>┌────────────────────────────────────────────────────────────────────────┐
+        <h3>2.2 UniTrack Solution Modules</h3>
+        <p>The project organizes the university ecosystem into four cohesive modules:</p>
+        <pre>┌────────────────────────────────────────────────────────────────────────┐
 │                        UNITRACK SYSTEM MODULES                         │
 ├────────────────────────────────────────────────────────────────────────┤
 │ 1. Academics:             DEPARTMENT, PROGRAM, COURSE                  │
@@ -628,1044 +598,1033 @@
 │ 3. Students & Courses:    STUDENT, COURSE_OFFERING, ENROLLMENT         │
 │ 4. Attendance & Marks:    ATTENDANCE, ASSIGNMENT, SUBMISSION           │
 └────────────────────────────────────────────────────────────────────────┘</pre>
-        </section>
+    </section>
 
-        <!-- 3. SYSTEM REQUIREMENTS & BUSINESS RULES -->
-        <section class="section-card" id="requirements">
-            <h2>3. System Requirements & Business Rules</h2>
-            <h3>3.1 Functional Requirements</h3>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width: 80px;">ID</th>
-                            <th style="width: 140px;">Module</th>
-                            <th>What the System Must Do</th>
-                            <th style="width: 220px;">Enforced By</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>FR-01</strong></td>
-                            <td>Department</td>
-                            <td>Store department ID and unique department name.</td>
-                            <td><code>DEPARTMENT.department_id</code> (PK)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>FR-02</strong></td>
-                            <td>HOD</td>
-                            <td>Each department has at most one faculty member as HOD.</td>
-                            <td><code>DEPARTMENT.hod_faculty_id</code> (FK)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>FR-03</strong></td>
-                            <td>Programs</td>
-                            <td>Departments offer programs with positive duration in years.</td>
-                            <td><code>PROGRAM.duration_years > 0</code></td>
-                        </tr>
-                        <tr>
-                            <td><strong>FR-04</strong></td>
-                            <td>Faculty</td>
-                            <td>Store faculty details with unique email ID and department.</td>
-                            <td><code>FACULTY.email</code> (UNIQUE)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>FR-05</strong></td>
-                            <td>Courses</td>
-                            <td>Maintain course catalog with unique code and positive credits.</td>
-                            <td><code>COURSE.code</code> (UNIQUE), <code>credits > 0</code></td>
-                        </tr>
-                        <tr>
-                            <td><strong>FR-06</strong></td>
-                            <td>Classrooms</td>
-                            <td>Store room number, campus block, and seating capacity.</td>
-                            <td><code>CLASSROOM.capacity > 0</code></td>
-                        </tr>
-                        <tr>
-                            <td><strong>FR-07</strong></td>
-                            <td>Offerings</td>
-                            <td>Create semester class sections with one teacher and room.</td>
-                            <td><code>COURSE_OFFERING</code> (FKs)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>FR-08</strong></td>
-                            <td>Students</td>
-                            <td>Track students with unique University Seat Numbers (USN).</td>
-                            <td><code>STUDENT.usn</code> (UNIQUE)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>FR-09</strong></td>
-                            <td>Enrollment</td>
-                            <td>Allow students to enroll in courses; stop duplicate enrollment.</td>
-                            <td><code>UNIQUE(student_id, offering_id)</code></td>
-                        </tr>
-                        <tr>
-                            <td><strong>FR-10</strong></td>
-                            <td>Attendance</td>
-                            <td>Mark daily attendance only for enrolled students.</td>
-                            <td><code>ATTENDANCE.enrollment_id</code> (FK)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>FR-11</strong></td>
-                            <td>Assignments</td>
-                            <td>Teachers post assignments with due dates and maximum marks.</td>
-                            <td><code>ASSIGNMENT.max_marks > 0</code></td>
-                        </tr>
-                        <tr>
-                            <td><strong>FR-12</strong></td>
-                            <td>Submissions</td>
-                            <td>Record student submissions with submission time and marks.</td>
-                            <td><code>SUBMISSION.marks</code> [0, max_marks]</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <!-- 3. SYSTEM REQUIREMENTS & BUSINESS RULES -->
+    <section class="section-card" id="requirements">
+        <h2>3. System Requirements & Business Rules</h2>
+        <h3>3.1 Functional Requirements</h3>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 80px;">ID</th>
+                        <th style="width: 140px;">Module</th>
+                        <th>What the System Must Do</th>
+                        <th style="width: 220px;">Enforced By</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>FR-01</strong></td>
+                        <td>Department</td>
+                        <td>Store department ID and unique department name.</td>
+                        <td><code>DEPARTMENT.department_id</code> (PK)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FR-02</strong></td>
+                        <td>HOD</td>
+                        <td>Each department has at most one faculty member as HOD.</td>
+                        <td><code>DEPARTMENT.hod_faculty_id</code> (FK)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FR-03</strong></td>
+                        <td>Programs</td>
+                        <td>Departments offer programs with positive duration in years.</td>
+                        <td><code>PROGRAM.duration_years > 0</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>FR-04</strong></td>
+                        <td>Faculty</td>
+                        <td>Store faculty details with unique email ID and department.</td>
+                        <td><code>FACULTY.email</code> (UNIQUE)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FR-05</strong></td>
+                        <td>Courses</td>
+                        <td>Maintain course catalog with unique code and positive credits.</td>
+                        <td><code>COURSE.code</code> (UNIQUE), <code>credits > 0</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>FR-06</strong></td>
+                        <td>Classrooms</td>
+                        <td>Store room number, campus block, and seating capacity.</td>
+                        <td><code>CLASSROOM.capacity > 0</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>FR-07</strong></td>
+                        <td>Offerings</td>
+                        <td>Create semester class sections with one teacher and room.</td>
+                        <td><code>COURSE_OFFERING</code> (FKs)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FR-08</strong></td>
+                        <td>Students</td>
+                        <td>Track students with unique University Seat Numbers (USN).</td>
+                        <td><code>STUDENT.usn</code> (UNIQUE)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FR-09</strong></td>
+                        <td>Enrollment</td>
+                        <td>Allow students to enroll in courses; stop duplicate enrollment.</td>
+                        <td><code>UNIQUE(student_id, offering_id)</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>FR-10</strong></td>
+                        <td>Attendance</td>
+                        <td>Mark daily attendance only for enrolled students.</td>
+                        <td><code>ATTENDANCE.enrollment_id</code> (FK)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FR-11</strong></td>
+                        <td>Assignments</td>
+                        <td>Teachers post assignments with due dates and maximum marks.</td>
+                        <td><code>ASSIGNMENT.max_marks > 0</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>FR-12</strong></td>
+                        <td>Submissions</td>
+                        <td>Record student submissions with submission time and marks.</td>
+                        <td><code>SUBMISSION.marks</code> [0, max_marks]</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>3.2 Main Business Rules</h3>
+        <ul>
+            <li><strong>One HOD per Department:</strong> A department can have only one HOD at a time.</li>
+            <li><strong>One Program per Student:</strong> A student is enrolled in exactly one degree program.</li>
+            <li><strong>No Duplicate Registration:</strong> A student cannot register for the same course offering
+                section twice.</li>
+            <li><strong>Attendance Needs Enrollment:</strong> Attendance can only be recorded for students who are
+                actively registered in that course section.</li>
+            <li><strong>Attendance Values:</strong> Status can be <code>Present</code> or <code>Absent</code> (default
+                is <code>'Present'</code>).</li>
+            <li><strong>Marks Limit:</strong> A student's marks cannot be negative and cannot exceed
+                <code>max_marks</code>.</li>
+        </ul>
+    </section>
+
+    <!-- 4. ER MODELING & CONCEPTUAL DESIGN -->
+    <section class="section-card" id="er-model">
+        <h2>4. ER Modeling & Conceptual Design</h2>
+        <h3>4.1 Entities in the System</h3>
+        <p>UniTrack has <strong>11 Strong Entities</strong>: <code>DEPARTMENT</code>, <code>PROGRAM</code>,
+            <code>FACULTY</code>, <code>COURSE</code>, <code>CLASSROOM</code>, <code>STUDENT</code>,
+            <code>COURSE_OFFERING</code>, <code>ENROLLMENT</code>, <code>ATTENDANCE</code>, <code>ASSIGNMENT</code>,
+            <code>SUBMISSION</code>.</p>
+        <p>Every table in UniTrack has its own dedicated primary key. For example, <code>ATTENDANCE</code> has
+            <code>attendance_id</code> as its primary key, making it a regular strong entity that references
+            <code>ENROLLMENT</code> through the foreign key <code>enrollment_id</code>.</p>
+
+        <h3>4.2 Relationship Summary</h3>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Relationship</th>
+                        <th>Entities Involved</th>
+                        <th>Type</th>
+                        <th>Meaning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Offers</strong></td>
+                        <td><code>DEPARTMENT</code> → <code>PROGRAM</code></td>
+                        <td>1:M</td>
+                        <td>A department offers one or more programs.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Employs</strong></td>
+                        <td><code>DEPARTMENT</code> → <code>FACULTY</code></td>
+                        <td>1:M</td>
+                        <td>A department employs faculty members.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Owns</strong></td>
+                        <td><code>DEPARTMENT</code> → <code>COURSE</code></td>
+                        <td>1:M</td>
+                        <td>A department owns courses in the catalog.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Heads</strong></td>
+                        <td><code>FACULTY</code> → <code>DEPARTMENT</code></td>
+                        <td>1:1</td>
+                        <td>One faculty member heads a department as HOD.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Admits</strong></td>
+                        <td><code>PROGRAM</code> → <code>STUDENT</code></td>
+                        <td>1:M</td>
+                        <td>A program admits students.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Schedules</strong></td>
+                        <td><code>COURSE</code> → <code>COURSE_OFFERING</code></td>
+                        <td>1:M</td>
+                        <td>A course is scheduled across different semesters.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Instructs</strong></td>
+                        <td><code>FACULTY</code> → <code>COURSE_OFFERING</code></td>
+                        <td>1:M</td>
+                        <td>A faculty member teaches a course section.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hosts</strong></td>
+                        <td><code>CLASSROOM</code> → <code>COURSE_OFFERING</code></td>
+                        <td>1:M</td>
+                        <td>A classroom hosts a course offering.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Registers</strong></td>
+                        <td><code>STUDENT</code> → <code>ENROLLMENT</code></td>
+                        <td>1:M</td>
+                        <td>A student registers for course offerings.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Populates</strong></td>
+                        <td><code>COURSE_OFFERING</code> → <code>ENROLLMENT</code></td>
+                        <td>1:M</td>
+                        <td>Course offerings have enrolled students.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Records</strong></td>
+                        <td><code>ENROLLMENT</code> → <code>ATTENDANCE</code></td>
+                        <td>1:M</td>
+                        <td>Enrolled students have session attendance.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Issues</strong></td>
+                        <td><code>COURSE_OFFERING</code> → <code>ASSIGNMENT</code></td>
+                        <td>1:M</td>
+                        <td>A course offering gives assignments.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Evaluates</strong></td>
+                        <td><code>ASSIGNMENT</code> → <code>SUBMISSION</code></td>
+                        <td>1:M</td>
+                        <td>An assignment receives student submissions.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Submits</strong></td>
+                        <td><code>STUDENT</code> → <code>SUBMISSION</code></td>
+                        <td>1:M</td>
+                        <td>A student submits completed coursework.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>4.3 Conceptual Peter Chen ER Diagram</h3>
+        <div class="figure-box">
+            <img src="../diagrams/ER_Diagram.png" alt="UniTrack Conceptual ER Diagram in Peter Chen Notation">
+            <figcaption>Figure 4.1: Final Conceptual ER Diagram in Peter Chen Notation (Authored by Melvin Jacob,
+                AU25UG-034).</figcaption>
+        </div>
+    </section>
+
+    <!-- 5. RELATIONAL SCHEMA & DATA DICTIONARY -->
+    <section class="section-card" id="schema">
+        <h2>5. Relational Schema & Data Dictionary</h2>
+        <h3>5.1 Schema Notation</h3>
+        <ul>
+            <li><code>DEPARTMENT</code> (<strong>department_id</strong>, name, hod_faculty_id [FK])</li>
+            <li><code>PROGRAM</code> (<strong>program_id</strong>, name, duration_years, department_id [FK])</li>
+            <li><code>FACULTY</code> (<strong>faculty_id</strong>, name, designation, email, department_id [FK])</li>
+            <li><code>COURSE</code> (<strong>course_id</strong>, code, title, credits, department_id [FK])</li>
+            <li><code>CLASSROOM</code> (<strong>classroom_id</strong>, building, room_no, capacity)</li>
+            <li><code>STUDENT</code> (<strong>student_id</strong>, usn, name, admission_year, program_id [FK])</li>
+            <li><code>COURSE_OFFERING</code> (<strong>offering_id</strong>, course_id [FK], faculty_id [FK],
+                classroom_id [FK], semester, year)</li>
+            <li><code>ENROLLMENT</code> (<strong>enrollment_id</strong>, student_id [FK], offering_id [FK], grade)</li>
+            <li><code>ATTENDANCE</code> (<strong>attendance_id</strong>, enrollment_id [FK], class_date, status)</li>
+            <li><code>ASSIGNMENT</code> (<strong>assignment_id</strong>, offering_id [FK], title, due_date, max_marks)
+            </li>
+            <li><code>SUBMISSION</code> (<strong>submission_id</strong>, assignment_id [FK], student_id [FK],
+                submitted_on, marks)</li>
+        </ul>
+
+        <div class="figure-box">
+            <img src="../diagrams/relational_schema.png" alt="UniTrack Relational Schema Architecture Diagram">
+            <figcaption>Figure 5.1: Relational Schema Diagram showing all 11 tables and 14 foreign key constraints.
+            </figcaption>
+        </div>
+
+        <h3>5.2 Data Dictionary (All 11 Tables)</h3>
+
+        <h4>1. DEPARTMENT</h4>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Key</th>
+                        <th>Type</th>
+                        <th>Null?</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>department_id</code></td>
+                        <td><span class="badge badge-pk">PK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Unique department ID</td>
+                    </tr>
+                    <tr>
+                        <td><code>name</code></td>
+                        <td>—</td>
+                        <td><code>VARCHAR(100)</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Department name (e.g. Computer Science)</td>
+                    </tr>
+                    <tr>
+                        <td><code>hod_faculty_id</code></td>
+                        <td><span class="badge badge-fk">FK</span></td>
+                        <td><code>INT</code></td>
+                        <td>Yes</td>
+                        <td><code>NULL</code></td>
+                        <td>Faculty member who is HOD</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>2. PROGRAM</h4>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Key</th>
+                        <th>Type</th>
+                        <th>Null?</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>program_id</code></td>
+                        <td><span class="badge badge-pk">PK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Unique program ID</td>
+                    </tr>
+                    <tr>
+                        <td><code>name</code></td>
+                        <td>—</td>
+                        <td><code>VARCHAR(100)</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Program title (e.g. B.Tech CS)</td>
+                    </tr>
+                    <tr>
+                        <td><code>duration_years</code></td>
+                        <td>—</td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td><code>4</code></td>
+                        <td>Course duration in years</td>
+                    </tr>
+                    <tr>
+                        <td><code>department_id</code></td>
+                        <td><span class="badge badge-fk">FK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Offering department ID</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>3. FACULTY</h4>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Key</th>
+                        <th>Type</th>
+                        <th>Null?</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>faculty_id</code></td>
+                        <td><span class="badge badge-pk">PK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Unique faculty ID</td>
+                    </tr>
+                    <tr>
+                        <td><code>name</code></td>
+                        <td>—</td>
+                        <td><code>VARCHAR(100)</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Faculty full name</td>
+                    </tr>
+                    <tr>
+                        <td><code>designation</code></td>
+                        <td>—</td>
+                        <td><code>VARCHAR(100)</code></td>
+                        <td>Yes</td>
+                        <td><code>NULL</code></td>
+                        <td>Professor, Associate Professor, etc.</td>
+                    </tr>
+                    <tr>
+                        <td><code>email</code></td>
+                        <td><span class="badge badge-unique">UNIQUE</span></td>
+                        <td><code>VARCHAR(150)</code></td>
+                        <td>Yes</td>
+                        <td><code>NULL</code></td>
+                        <td>Faculty official email address</td>
+                    </tr>
+                    <tr>
+                        <td><code>department_id</code></td>
+                        <td><span class="badge badge-fk">FK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Home department ID</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>4. COURSE</h4>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Key</th>
+                        <th>Type</th>
+                        <th>Null?</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>course_id</code></td>
+                        <td><span class="badge badge-pk">PK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Unique course ID</td>
+                    </tr>
+                    <tr>
+                        <td><code>code</code></td>
+                        <td><span class="badge badge-unique">UNIQUE</span></td>
+                        <td><code>VARCHAR(20)</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Course code (e.g. CS201)</td>
+                    </tr>
+                    <tr>
+                        <td><code>title</code></td>
+                        <td>—</td>
+                        <td><code>VARCHAR(150)</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Course title</td>
+                    </tr>
+                    <tr>
+                        <td><code>credits</code></td>
+                        <td>—</td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td><code>3</code></td>
+                        <td>Course credit value</td>
+                    </tr>
+                    <tr>
+                        <td><code>department_id</code></td>
+                        <td><span class="badge badge-fk">FK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Department offering this course</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>5. CLASSROOM</h4>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Key</th>
+                        <th>Type</th>
+                        <th>Null?</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>classroom_id</code></td>
+                        <td><span class="badge badge-pk">PK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Unique room ID</td>
+                    </tr>
+                    <tr>
+                        <td><code>building</code></td>
+                        <td>—</td>
+                        <td><code>VARCHAR(100)</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Campus block name</td>
+                    </tr>
+                    <tr>
+                        <td><code>room_no</code></td>
+                        <td>—</td>
+                        <td><code>VARCHAR(20)</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Room number</td>
+                    </tr>
+                    <tr>
+                        <td><code>capacity</code></td>
+                        <td>—</td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Maximum seating capacity</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>6. STUDENT</h4>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Key</th>
+                        <th>Type</th>
+                        <th>Null?</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>student_id</code></td>
+                        <td><span class="badge badge-pk">PK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Unique student ID</td>
+                    </tr>
+                    <tr>
+                        <td><code>usn</code></td>
+                        <td><span class="badge badge-unique">UNIQUE</span></td>
+                        <td><code>VARCHAR(30)</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>University Seat Number</td>
+                    </tr>
+                    <tr>
+                        <td><code>name</code></td>
+                        <td>—</td>
+                        <td><code>VARCHAR(100)</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Student full name</td>
+                    </tr>
+                    <tr>
+                        <td><code>admission_year</code></td>
+                        <td>—</td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Year of joining</td>
+                    </tr>
+                    <tr>
+                        <td><code>program_id</code></td>
+                        <td><span class="badge badge-fk">FK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Enrolled degree program ID</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>7. COURSE_OFFERING</h4>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Key</th>
+                        <th>Type</th>
+                        <th>Null?</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>offering_id</code></td>
+                        <td><span class="badge badge-pk">PK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Unique offering ID</td>
+                    </tr>
+                    <tr>
+                        <td><code>course_id</code></td>
+                        <td><span class="badge badge-fk">FK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Subject from catalog</td>
+                    </tr>
+                    <tr>
+                        <td><code>faculty_id</code></td>
+                        <td><span class="badge badge-fk">FK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Assigned teacher</td>
+                    </tr>
+                    <tr>
+                        <td><code>classroom_id</code></td>
+                        <td><span class="badge badge-fk">FK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Assigned lecture hall</td>
+                    </tr>
+                    <tr>
+                        <td><code>semester</code></td>
+                        <td>—</td>
+                        <td><code>VARCHAR(20)</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Fall, Spring, or Summer</td>
+                    </tr>
+                    <tr>
+                        <td><code>year</code></td>
+                        <td>—</td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Academic year</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>8. ENROLLMENT</h4>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Key</th>
+                        <th>Type</th>
+                        <th>Null?</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>enrollment_id</code></td>
+                        <td><span class="badge badge-pk">PK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Unique enrollment ID</td>
+                    </tr>
+                    <tr>
+                        <td><code>student_id</code></td>
+                        <td><span class="badge badge-fk">FK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Enrolled student ID</td>
+                    </tr>
+                    <tr>
+                        <td><code>offering_id</code></td>
+                        <td><span class="badge badge-fk">FK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Course section ID</td>
+                    </tr>
+                    <tr>
+                        <td><code>grade</code></td>
+                        <td>—</td>
+                        <td><code>VARCHAR(20)</code></td>
+                        <td>Yes</td>
+                        <td><code>'In Progress'</code></td>
+                        <td>Final grade or status</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p><small><em>Constraint:</em> <code>UNIQUE (student_id, offering_id)</code> physically prevents duplicate
+                student enrollments in the same class section.</small></p>
+
+        <h4>9. ATTENDANCE</h4>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Key</th>
+                        <th>Type</th>
+                        <th>Null?</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>attendance_id</code></td>
+                        <td><span class="badge badge-pk">PK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Unique attendance ID</td>
+                    </tr>
+                    <tr>
+                        <td><code>enrollment_id</code></td>
+                        <td><span class="badge badge-fk">FK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Links to student's enrollment</td>
+                    </tr>
+                    <tr>
+                        <td><code>class_date</code></td>
+                        <td>—</td>
+                        <td><code>DATE</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Date of the lecture</td>
+                    </tr>
+                    <tr>
+                        <td><code>status</code></td>
+                        <td>—</td>
+                        <td><code>VARCHAR(20)</code></td>
+                        <td>No</td>
+                        <td><code>'Present'</code></td>
+                        <td>Present, Absent</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>10. ASSIGNMENT</h4>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Key</th>
+                        <th>Type</th>
+                        <th>Null?</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>assignment_id</code></td>
+                        <td><span class="badge badge-pk">PK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Unique assignment ID</td>
+                    </tr>
+                    <tr>
+                        <td><code>offering_id</code></td>
+                        <td><span class="badge badge-fk">FK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Course section giving the work</td>
+                    </tr>
+                    <tr>
+                        <td><code>title</code></td>
+                        <td>—</td>
+                        <td><code>VARCHAR(150)</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Assignment title</td>
+                    </tr>
+                    <tr>
+                        <td><code>due_date</code></td>
+                        <td>—</td>
+                        <td><code>DATE</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Last date for submission</td>
+                    </tr>
+                    <tr>
+                        <td><code>max_marks</code></td>
+                        <td>—</td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Maximum achievable marks</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h4>11. SUBMISSION</h4>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Key</th>
+                        <th>Type</th>
+                        <th>Null?</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>submission_id</code></td>
+                        <td><span class="badge badge-pk">PK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Unique submission ID</td>
+                    </tr>
+                    <tr>
+                        <td><code>assignment_id</code></td>
+                        <td><span class="badge badge-fk">FK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Assignment being submitted</td>
+                    </tr>
+                    <tr>
+                        <td><code>student_id</code></td>
+                        <td><span class="badge badge-fk">FK</span></td>
+                        <td><code>INT</code></td>
+                        <td>No</td>
+                        <td>None</td>
+                        <td>Submitting student ID</td>
+                    </tr>
+                    <tr>
+                        <td><code>submitted_on</code></td>
+                        <td>—</td>
+                        <td><code>DATETIME</code></td>
+                        <td>Yes</td>
+                        <td><code>CURRENT_TIMESTAMP</code></td>
+                        <td>Date and time submitted</td>
+                    </tr>
+                    <tr>
+                        <td><code>marks</code></td>
+                        <td>—</td>
+                        <td><code>DECIMAL(5,2)</code></td>
+                        <td>Yes</td>
+                        <td><code>NULL</code></td>
+                        <td>Marks given by teacher</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 6. KEY DESIGN DECISIONS -->
+    <section class="section-card" id="design-decisions">
+        <h2>6. Key Design Decisions</h2>
+        <ol>
+            <li><strong>Department and Faculty Circular Reference:</strong><br>
+                A department needs an HOD (from <code>FACULTY</code>), and a faculty member belongs to a
+                <code>DEPARTMENT</code>. We create <code>DEPARTMENT</code> first with <code>hod_faculty_id</code> set to
+                <code>NULL</code>, create <code>FACULTY</code>, and then link the HOD using <code>ALTER TABLE</code>. If
+                an HOD leaves, <code>ON DELETE SET NULL</code> keeps the department safe while marking HOD as empty.
+            </li>
+            <li><strong>Separating Course Catalog from Offerings:</strong><br>
+                The basic syllabus (<code>COURSE</code>: code, title, credits) stays the same for years. The actual
+                class (<code>COURSE_OFFERING</code>: teacher, room, term, year) changes every semester. Keeping them
+                separate avoids repeating course titles again and again.</li>
+            <li><strong>Linking Attendance to Enrollment:</strong><br>
+                Attendance points to <code>ENROLLMENT</code> rather than student and course separately. This physically
+                prevents attendance from being entered for a student who is not registered.</li>
+        </ol>
+    </section>
+
+    <!-- 7. DATABASE NORMALIZATION (1NF, 2NF, 3NF) -->
+    <section class="section-card" id="normalization">
+        <h2>7. Database Normalization (1NF, 2NF, 3NF)</h2>
+        <p>Normalization is the process of organizing tables to stop duplicate data and avoid errors when inserting,
+            updating, or deleting. UniTrack is fully in <strong>Third Normal Form (3NF)</strong>.</p>
+
+        <h3>1. First Normal Form (1NF)</h3>
+        <ul>
+            <li><strong>Rule:</strong> Every column must hold a single (atomic) value. No lists or comma-separated
+                items.</li>
+            <li><strong>In UniTrack:</strong> All columns store single values. For example, attendance dates are not
+                stored as a list inside a student's row; each date has its own row in <code>ATTENDANCE</code>.</li>
+        </ul>
+
+        <h3>2. Second Normal Form (2NF)</h3>
+        <ul>
+            <li><strong>Rule:</strong> The table must be in 1NF, and every non-key column must depend on the whole
+                primary key (no partial dependencies).</li>
+            <li><strong>In UniTrack:</strong> 10 tables have single-column primary keys (like <code>student_id</code>,
+                <code>course_id</code>), so partial dependency is impossible. In <code>ENROLLMENT</code>, the natural
+                key is <code>(student_id, offering_id)</code>. The column <code>grade</code> depends on
+                <strong>both</strong> the student and the offering together.</li>
+        </ul>
+
+        <h3>3. Third Normal Form (3NF)</h3>
+        <ul>
+            <li><strong>Rule:</strong> The table must be in 2NF, and no non-key column should depend on another non-key
+                column (no transitive dependencies like A → B → C).</li>
+            <li><strong>In UniTrack:</strong>
+                <ul>
+                    <li>In <code>STUDENT</code>, we only store <code>program_id</code>. Program duration and department
+                        are kept in <code>PROGRAM</code>, avoiding transitive links (Student → Program → Department).
+                    </li>
+                    <li>In <code>COURSE_OFFERING</code>, we only store <code>course_id</code>. Course title and credits
+                        are kept in <code>COURSE</code>, avoiding transitive links (Offering → Course → Credits).</li>
+                    <li>All 11 tables satisfy 3NF with zero data anomalies.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 8. DATABASE IMPLEMENTATION & DATA SUMMARY -->
+    <section class="section-card" id="data-summary">
+        <h2>8. Database Implementation & Data Summary</h2>
+        <h3>8.1 Setup Details</h3>
+        <ul>
+            <li><strong>RDBMS:</strong> MySQL 8.0+</li>
+            <li><strong>Engine:</strong> InnoDB (Supports ACID transactions and Foreign Keys)</li>
+            <li><strong>Data Insertion Order:</strong> Tables were filled in parent-to-child order so foreign key
+                references never fail.</li>
+        </ul>
+
+        <h3>8.2 Total Data in Database</h3>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Table Name</th>
+                        <th>Row Count</th>
+                        <th>Purpose & Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>DEPARTMENT</code></td>
+                        <td><span class="badge badge-count">5</span></td>
+                        <td>CS, EE, ME, CE, BA departments (all have active HODs).</td>
+                    </tr>
+                    <tr>
+                        <td><code>PROGRAM</code></td>
+                        <td><span class="badge badge-count">8</span></td>
+                        <td>B.Tech, M.Tech, MBA, Ph.D programs.</td>
+                    </tr>
+                    <tr>
+                        <td><code>FACULTY</code></td>
+                        <td><span class="badge badge-count">20</span></td>
+                        <td>Professors, Associate Professors, Assistant Professors.</td>
+                    </tr>
+                    <tr>
+                        <td><code>COURSE</code></td>
+                        <td><span class="badge badge-count">25</span></td>
+                        <td>Core engineering and management subjects.</td>
+                    </tr>
+                    <tr>
+                        <td><code>CLASSROOM</code></td>
+                        <td><span class="badge badge-count">10</span></td>
+                        <td>Lecture halls across campus blocks.</td>
+                    </tr>
+                    <tr>
+                        <td><code>STUDENT</code></td>
+                        <td><span class="badge badge-count">100</span></td>
+                        <td>USNs <code>UT22001</code> to <code>UT25100</code> (Batches 2022 to 2025).</td>
+                    </tr>
+                    <tr>
+                        <td><code>COURSE_OFFERING</code></td>
+                        <td><span class="badge badge-count">30</span></td>
+                        <td>10 classes per semester (Fall 2024, Spring 2025, Fall 2025).</td>
+                    </tr>
+                    <tr>
+                        <td><code>ENROLLMENT</code></td>
+                        <td><span class="badge badge-count">250</span></td>
+                        <td>8 to 10 students registered per class.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ATTENDANCE</code></td>
+                        <td><span class="badge badge-count">2,500</span></td>
+                        <td>10 attendance sessions per enrolled student (2,205 Present [88.2%], 295 Absent [11.8%]).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>ASSIGNMENT</code></td>
+                        <td><span class="badge badge-count">50</span></td>
+                        <td>~2 assignments per course offering section.</td>
+                    </tr>
+                    <tr>
+                        <td><code>SUBMISSION</code></td>
+                        <td><span class="badge badge-count">418</span></td>
+                        <td>Assignment submissions with marks [0 to max_marks]; exactly 12 deliberate unsubmitted
+                            assignments for audit.</td>
+                    </tr>
+                    <tr style="background:#f1f5f9; font-weight:700;">
+                        <td><strong>TOTAL</strong></td>
+                        <td><span class="badge badge-count" style="background:#bbf7d0; color:#14532d;">3,416 Rows</span>
+                        </td>
+                        <td><strong>11 Normalized Relations; 100% constraints and relationships verified.</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 9. SQL QUERIES & RESULTS (Q1–Q10) -->
+    <section class="section-card" id="queries">
+        <h2>9. SQL Queries & Results (Q1–Q10)</h2>
+        <p>This section documents the <strong>10 analytical queries (Q1 to Q10)</strong> developed by <strong>Padmaraju
+                Poojitha (<code>AU25UG-043</code>)</strong>, complete with their SQL syntax, output data tables,
+            execution screenshot proofs, and database analytical findings.</p>
+
+        <!-- Q1 -->
+        <div class="query-box" id="q1">
+            <div class="query-header">
+                <h3 class="query-title">Q1: Students with the Highest Course Load</h3>
+                <span class="badge badge-pk">Subquery & ALL</span>
             </div>
-
-            <h3>3.2 Main Business Rules</h3>
-            <ul>
-                <li><strong>One HOD per Department:</strong> A department can have only one HOD at a time.</li>
-                <li><strong>One Program per Student:</strong> A student is enrolled in exactly one degree program.</li>
-                <li><strong>No Duplicate Registration:</strong> A student cannot register for the same course offering
-                    section twice.</li>
-                <li><strong>Attendance Needs Enrollment:</strong> Attendance can only be recorded for students who are
-                    actively registered in that course section.</li>
-                <li><strong>Attendance Values:</strong> Status can be <code>Present</code> or <code>Absent</code>
-                    (default is <code>'Present'</code>).</li>
-                <li><strong>Marks Limit:</strong> A student's marks cannot be negative and cannot exceed
-                    <code>max_marks</code>.
-                </li>
-            </ul>
-        </section>
-
-        <!-- 4. ER MODELING & CONCEPTUAL DESIGN -->
-        <section class="section-card" id="er-model">
-            <h2>4. ER Modeling & Conceptual Design</h2>
-            <h3>4.1 Entities in the System</h3>
-            <p>UniTrack has <strong>11 Strong Entities</strong>: <code>DEPARTMENT</code>, <code>PROGRAM</code>,
-                <code>FACULTY</code>, <code>COURSE</code>, <code>CLASSROOM</code>, <code>STUDENT</code>,
-                <code>COURSE_OFFERING</code>, <code>ENROLLMENT</code>, <code>ATTENDANCE</code>, <code>ASSIGNMENT</code>,
-                <code>SUBMISSION</code>.
-            </p>
-            <p>Every table in UniTrack has its own dedicated primary key. For example, <code>ATTENDANCE</code> has
-                <code>attendance_id</code> as its primary key, making it a regular strong entity that references
-                <code>ENROLLMENT</code> through the foreign key <code>enrollment_id</code>.
-            </p>
-
-            <h3>4.2 Relationship Summary</h3>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Relationship</th>
-                            <th>Entities Involved</th>
-                            <th>Type</th>
-                            <th>Meaning</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Offers</strong></td>
-                            <td><code>DEPARTMENT</code> → <code>PROGRAM</code></td>
-                            <td>1:M</td>
-                            <td>A department offers one or more programs.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Employs</strong></td>
-                            <td><code>DEPARTMENT</code> → <code>FACULTY</code></td>
-                            <td>1:M</td>
-                            <td>A department employs faculty members.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Owns</strong></td>
-                            <td><code>DEPARTMENT</code> → <code>COURSE</code></td>
-                            <td>1:M</td>
-                            <td>A department owns courses in the catalog.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Heads</strong></td>
-                            <td><code>FACULTY</code> → <code>DEPARTMENT</code></td>
-                            <td>1:1</td>
-                            <td>One faculty member heads a department as HOD.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Admits</strong></td>
-                            <td><code>PROGRAM</code> → <code>STUDENT</code></td>
-                            <td>1:M</td>
-                            <td>A program admits students.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Schedules</strong></td>
-                            <td><code>COURSE</code> → <code>COURSE_OFFERING</code></td>
-                            <td>1:M</td>
-                            <td>A course is scheduled across different semesters.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Instructs</strong></td>
-                            <td><code>FACULTY</code> → <code>COURSE_OFFERING</code></td>
-                            <td>1:M</td>
-                            <td>A faculty member teaches a course section.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Hosts</strong></td>
-                            <td><code>CLASSROOM</code> → <code>COURSE_OFFERING</code></td>
-                            <td>1:M</td>
-                            <td>A classroom hosts a course offering.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Registers</strong></td>
-                            <td><code>STUDENT</code> → <code>ENROLLMENT</code></td>
-                            <td>1:M</td>
-                            <td>A student registers for course offerings.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Populates</strong></td>
-                            <td><code>COURSE_OFFERING</code> → <code>ENROLLMENT</code></td>
-                            <td>1:M</td>
-                            <td>Course offerings have enrolled students.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Records</strong></td>
-                            <td><code>ENROLLMENT</code> → <code>ATTENDANCE</code></td>
-                            <td>1:M</td>
-                            <td>Enrolled students have session attendance.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Issues</strong></td>
-                            <td><code>COURSE_OFFERING</code> → <code>ASSIGNMENT</code></td>
-                            <td>1:M</td>
-                            <td>A course offering gives assignments.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Evaluates</strong></td>
-                            <td><code>ASSIGNMENT</code> → <code>SUBMISSION</code></td>
-                            <td>1:M</td>
-                            <td>An assignment receives student submissions.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Submits</strong></td>
-                            <td><code>STUDENT</code> → <code>SUBMISSION</code></td>
-                            <td>1:M</td>
-                            <td>A student submits completed coursework.</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="query-why">
+                <strong>Business Rationale:</strong> Helps academic advisors find students carrying heavy course loads
+                who might need academic counseling.
             </div>
-
-            <h3>4.3 Conceptual Peter Chen ER Diagram</h3>
-            <div class="figure-box">
-                <img src="../diagrams/ER_Diagram.png" alt="UniTrack Conceptual ER Diagram in Peter Chen Notation">
-                <figcaption>Figure 4.1: Final Conceptual ER Diagram in Peter Chen Notation (Authored by Melvin Jacob,
-                    AU25UG-034).</figcaption>
-            </div>
-        </section>
-
-        <!-- 5. RELATIONAL SCHEMA & DATA DICTIONARY -->
-        <section class="section-card" id="schema">
-            <h2>5. Relational Schema & Data Dictionary</h2>
-            <h3>5.1 Schema Notation</h3>
-            <ul>
-                <li><code>DEPARTMENT</code> (<strong>department_id</strong>, name, hod_faculty_id [FK])</li>
-                <li><code>PROGRAM</code> (<strong>program_id</strong>, name, duration_years, department_id [FK])</li>
-                <li><code>FACULTY</code> (<strong>faculty_id</strong>, name, designation, email, department_id [FK])
-                </li>
-                <li><code>COURSE</code> (<strong>course_id</strong>, code, title, credits, department_id [FK])</li>
-                <li><code>CLASSROOM</code> (<strong>classroom_id</strong>, building, room_no, capacity)</li>
-                <li><code>STUDENT</code> (<strong>student_id</strong>, usn, name, admission_year, program_id [FK])</li>
-                <li><code>COURSE_OFFERING</code> (<strong>offering_id</strong>, course_id [FK], faculty_id [FK],
-                    classroom_id [FK], semester, year)</li>
-                <li><code>ENROLLMENT</code> (<strong>enrollment_id</strong>, student_id [FK], offering_id [FK], grade)
-                </li>
-                <li><code>ATTENDANCE</code> (<strong>attendance_id</strong>, enrollment_id [FK], class_date, status)
-                </li>
-                <li><code>ASSIGNMENT</code> (<strong>assignment_id</strong>, offering_id [FK], title, due_date,
-                    max_marks)</li>
-                <li><code>SUBMISSION</code> (<strong>submission_id</strong>, assignment_id [FK], student_id [FK],
-                    submitted_on, marks)</li>
-            </ul>
-
-            <div class="figure-box">
-                <img src="../diagrams/relational_schema.png" alt="UniTrack Relational Schema Architecture Diagram">
-                <figcaption>Figure 5.1: Relational Schema Diagram showing all 11 tables and 14 foreign key constraints.
-                </figcaption>
-            </div>
-
-            <h3>5.2 Data Dictionary (All 11 Tables)</h3>
-
-            <h4>1. DEPARTMENT</h4>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Column</th>
-                            <th>Key</th>
-                            <th>Type</th>
-                            <th>Null?</th>
-                            <th>Default</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>department_id</code></td>
-                            <td><span class="badge badge-pk">PK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Unique department ID</td>
-                        </tr>
-                        <tr>
-                            <td><code>name</code></td>
-                            <td>—</td>
-                            <td><code>VARCHAR(100)</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Department name (e.g. Computer Science)</td>
-                        </tr>
-                        <tr>
-                            <td><code>hod_faculty_id</code></td>
-                            <td><span class="badge badge-fk">FK</span></td>
-                            <td><code>INT</code></td>
-                            <td>Yes</td>
-                            <td><code>NULL</code></td>
-                            <td>Faculty member who is HOD</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h4>2. PROGRAM</h4>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Column</th>
-                            <th>Key</th>
-                            <th>Type</th>
-                            <th>Null?</th>
-                            <th>Default</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>program_id</code></td>
-                            <td><span class="badge badge-pk">PK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Unique program ID</td>
-                        </tr>
-                        <tr>
-                            <td><code>name</code></td>
-                            <td>—</td>
-                            <td><code>VARCHAR(100)</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Program title (e.g. B.Tech CS)</td>
-                        </tr>
-                        <tr>
-                            <td><code>duration_years</code></td>
-                            <td>—</td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td><code>4</code></td>
-                            <td>Course duration in years</td>
-                        </tr>
-                        <tr>
-                            <td><code>department_id</code></td>
-                            <td><span class="badge badge-fk">FK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Offering department ID</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h4>3. FACULTY</h4>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Column</th>
-                            <th>Key</th>
-                            <th>Type</th>
-                            <th>Null?</th>
-                            <th>Default</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>faculty_id</code></td>
-                            <td><span class="badge badge-pk">PK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Unique faculty ID</td>
-                        </tr>
-                        <tr>
-                            <td><code>name</code></td>
-                            <td>—</td>
-                            <td><code>VARCHAR(100)</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Faculty full name</td>
-                        </tr>
-                        <tr>
-                            <td><code>designation</code></td>
-                            <td>—</td>
-                            <td><code>VARCHAR(100)</code></td>
-                            <td>Yes</td>
-                            <td><code>NULL</code></td>
-                            <td>Professor, Associate Professor, etc.</td>
-                        </tr>
-                        <tr>
-                            <td><code>email</code></td>
-                            <td><span class="badge badge-unique">UNIQUE</span></td>
-                            <td><code>VARCHAR(150)</code></td>
-                            <td>Yes</td>
-                            <td><code>NULL</code></td>
-                            <td>Faculty official email address</td>
-                        </tr>
-                        <tr>
-                            <td><code>department_id</code></td>
-                            <td><span class="badge badge-fk">FK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Home department ID</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h4>4. COURSE</h4>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Column</th>
-                            <th>Key</th>
-                            <th>Type</th>
-                            <th>Null?</th>
-                            <th>Default</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>course_id</code></td>
-                            <td><span class="badge badge-pk">PK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Unique course ID</td>
-                        </tr>
-                        <tr>
-                            <td><code>code</code></td>
-                            <td><span class="badge badge-unique">UNIQUE</span></td>
-                            <td><code>VARCHAR(20)</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Course code (e.g. CS201)</td>
-                        </tr>
-                        <tr>
-                            <td><code>title</code></td>
-                            <td>—</td>
-                            <td><code>VARCHAR(150)</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Course title</td>
-                        </tr>
-                        <tr>
-                            <td><code>credits</code></td>
-                            <td>—</td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td><code>3</code></td>
-                            <td>Course credit value</td>
-                        </tr>
-                        <tr>
-                            <td><code>department_id</code></td>
-                            <td><span class="badge badge-fk">FK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Department offering this course</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h4>5. CLASSROOM</h4>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Column</th>
-                            <th>Key</th>
-                            <th>Type</th>
-                            <th>Null?</th>
-                            <th>Default</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>classroom_id</code></td>
-                            <td><span class="badge badge-pk">PK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Unique room ID</td>
-                        </tr>
-                        <tr>
-                            <td><code>building</code></td>
-                            <td>—</td>
-                            <td><code>VARCHAR(100)</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Campus block name</td>
-                        </tr>
-                        <tr>
-                            <td><code>room_no</code></td>
-                            <td>—</td>
-                            <td><code>VARCHAR(20)</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Room number</td>
-                        </tr>
-                        <tr>
-                            <td><code>capacity</code></td>
-                            <td>—</td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Maximum seating capacity</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h4>6. STUDENT</h4>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Column</th>
-                            <th>Key</th>
-                            <th>Type</th>
-                            <th>Null?</th>
-                            <th>Default</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>student_id</code></td>
-                            <td><span class="badge badge-pk">PK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Unique student ID</td>
-                        </tr>
-                        <tr>
-                            <td><code>usn</code></td>
-                            <td><span class="badge badge-unique">UNIQUE</span></td>
-                            <td><code>VARCHAR(30)</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>University Seat Number</td>
-                        </tr>
-                        <tr>
-                            <td><code>name</code></td>
-                            <td>—</td>
-                            <td><code>VARCHAR(100)</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Student full name</td>
-                        </tr>
-                        <tr>
-                            <td><code>admission_year</code></td>
-                            <td>—</td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Year of joining</td>
-                        </tr>
-                        <tr>
-                            <td><code>program_id</code></td>
-                            <td><span class="badge badge-fk">FK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Enrolled degree program ID</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h4>7. COURSE_OFFERING</h4>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Column</th>
-                            <th>Key</th>
-                            <th>Type</th>
-                            <th>Null?</th>
-                            <th>Default</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>offering_id</code></td>
-                            <td><span class="badge badge-pk">PK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Unique offering ID</td>
-                        </tr>
-                        <tr>
-                            <td><code>course_id</code></td>
-                            <td><span class="badge badge-fk">FK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Subject from catalog</td>
-                        </tr>
-                        <tr>
-                            <td><code>faculty_id</code></td>
-                            <td><span class="badge badge-fk">FK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Assigned teacher</td>
-                        </tr>
-                        <tr>
-                            <td><code>classroom_id</code></td>
-                            <td><span class="badge badge-fk">FK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Assigned lecture hall</td>
-                        </tr>
-                        <tr>
-                            <td><code>semester</code></td>
-                            <td>—</td>
-                            <td><code>VARCHAR(20)</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Fall, Spring, or Summer</td>
-                        </tr>
-                        <tr>
-                            <td><code>year</code></td>
-                            <td>—</td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Academic year</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h4>8. ENROLLMENT</h4>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Column</th>
-                            <th>Key</th>
-                            <th>Type</th>
-                            <th>Null?</th>
-                            <th>Default</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>enrollment_id</code></td>
-                            <td><span class="badge badge-pk">PK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Unique enrollment ID</td>
-                        </tr>
-                        <tr>
-                            <td><code>student_id</code></td>
-                            <td><span class="badge badge-fk">FK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Enrolled student ID</td>
-                        </tr>
-                        <tr>
-                            <td><code>offering_id</code></td>
-                            <td><span class="badge badge-fk">FK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Course section ID</td>
-                        </tr>
-                        <tr>
-                            <td><code>grade</code></td>
-                            <td>—</td>
-                            <td><code>VARCHAR(20)</code></td>
-                            <td>Yes</td>
-                            <td><code>'In Progress'</code></td>
-                            <td>Final grade or status</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p><small><em>Constraint:</em> <code>UNIQUE (student_id, offering_id)</code> physically prevents duplicate
-                    student enrollments in the same class section.</small></p>
-
-            <h4>9. ATTENDANCE</h4>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Column</th>
-                            <th>Key</th>
-                            <th>Type</th>
-                            <th>Null?</th>
-                            <th>Default</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>attendance_id</code></td>
-                            <td><span class="badge badge-pk">PK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Unique attendance ID</td>
-                        </tr>
-                        <tr>
-                            <td><code>enrollment_id</code></td>
-                            <td><span class="badge badge-fk">FK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Links to student's enrollment</td>
-                        </tr>
-                        <tr>
-                            <td><code>class_date</code></td>
-                            <td>—</td>
-                            <td><code>DATE</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Date of the lecture</td>
-                        </tr>
-                        <tr>
-                            <td><code>status</code></td>
-                            <td>—</td>
-                            <td><code>VARCHAR(20)</code></td>
-                            <td>No</td>
-                            <td><code>'Present'</code></td>
-                            <td>Present, Absent</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h4>10. ASSIGNMENT</h4>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Column</th>
-                            <th>Key</th>
-                            <th>Type</th>
-                            <th>Null?</th>
-                            <th>Default</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>assignment_id</code></td>
-                            <td><span class="badge badge-pk">PK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Unique assignment ID</td>
-                        </tr>
-                        <tr>
-                            <td><code>offering_id</code></td>
-                            <td><span class="badge badge-fk">FK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Course section giving the work</td>
-                        </tr>
-                        <tr>
-                            <td><code>title</code></td>
-                            <td>—</td>
-                            <td><code>VARCHAR(150)</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Assignment title</td>
-                        </tr>
-                        <tr>
-                            <td><code>due_date</code></td>
-                            <td>—</td>
-                            <td><code>DATE</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Last date for submission</td>
-                        </tr>
-                        <tr>
-                            <td><code>max_marks</code></td>
-                            <td>—</td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Maximum achievable marks</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h4>11. SUBMISSION</h4>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Column</th>
-                            <th>Key</th>
-                            <th>Type</th>
-                            <th>Null?</th>
-                            <th>Default</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>submission_id</code></td>
-                            <td><span class="badge badge-pk">PK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Unique submission ID</td>
-                        </tr>
-                        <tr>
-                            <td><code>assignment_id</code></td>
-                            <td><span class="badge badge-fk">FK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Assignment being submitted</td>
-                        </tr>
-                        <tr>
-                            <td><code>student_id</code></td>
-                            <td><span class="badge badge-fk">FK</span></td>
-                            <td><code>INT</code></td>
-                            <td>No</td>
-                            <td>None</td>
-                            <td>Submitting student ID</td>
-                        </tr>
-                        <tr>
-                            <td><code>submitted_on</code></td>
-                            <td>—</td>
-                            <td><code>DATETIME</code></td>
-                            <td>Yes</td>
-                            <td><code>CURRENT_TIMESTAMP</code></td>
-                            <td>Date and time submitted</td>
-                        </tr>
-                        <tr>
-                            <td><code>marks</code></td>
-                            <td>—</td>
-                            <td><code>DECIMAL(5,2)</code></td>
-                            <td>Yes</td>
-                            <td><code>NULL</code></td>
-                            <td>Marks given by teacher</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- 6. KEY DESIGN DECISIONS -->
-        <section class="section-card" id="design-decisions">
-            <h2>6. Key Design Decisions</h2>
-            <ol>
-                <li><strong>Department and Faculty Circular Reference:</strong><br>
-                    A department needs an HOD (from <code>FACULTY</code>), and a faculty member belongs to a
-                    <code>DEPARTMENT</code>. We create <code>DEPARTMENT</code> first with <code>hod_faculty_id</code>
-                    set to <code>NULL</code>, create <code>FACULTY</code>, and then link the HOD using
-                    <code>ALTER TABLE</code>. If an HOD leaves, <code>ON DELETE SET NULL</code> keeps the department
-                    safe while marking HOD as empty.
-                </li>
-                <li><strong>Separating Course Catalog from Offerings:</strong><br>
-                    The basic syllabus (<code>COURSE</code>: code, title, credits) stays the same for years. The actual
-                    class (<code>COURSE_OFFERING</code>: teacher, room, term, year) changes every semester. Keeping them
-                    separate avoids repeating course titles again and again.</li>
-                <li><strong>Linking Attendance to Enrollment:</strong><br>
-                    Attendance points to <code>ENROLLMENT</code> rather than student and course separately. This
-                    physically prevents attendance from being entered for a student who is not registered.</li>
-            </ol>
-        </section>
-
-        <!-- 7. DATABASE NORMALIZATION (1NF, 2NF, 3NF) -->
-        <section class="section-card" id="normalization">
-            <h2>7. Database Normalization (1NF, 2NF, 3NF)</h2>
-            <p>Normalization is the process of organizing tables to stop duplicate data and avoid errors when inserting,
-                updating, or deleting. UniTrack is fully in <strong>Third Normal Form (3NF)</strong>.</p>
-
-            <h3>1. First Normal Form (1NF)</h3>
-            <ul>
-                <li><strong>Rule:</strong> Every column must hold a single (atomic) value. No lists or comma-separated
-                    items.</li>
-                <li><strong>In UniTrack:</strong> All columns store single values. For example, attendance dates are not
-                    stored as a list inside a student's row; each date has its own row in <code>ATTENDANCE</code>.</li>
-            </ul>
-
-            <h3>2. Second Normal Form (2NF)</h3>
-            <ul>
-                <li><strong>Rule:</strong> The table must be in 1NF, and every non-key column must depend on the whole
-                    primary key (no partial dependencies).</li>
-                <li><strong>In UniTrack:</strong> 10 tables have single-column primary keys (like
-                    <code>student_id</code>, <code>course_id</code>), so partial dependency is impossible. In
-                    <code>ENROLLMENT</code>, the natural key is <code>(student_id, offering_id)</code>. The column
-                    <code>grade</code> depends on <strong>both</strong> the student and the offering together.
-                </li>
-            </ul>
-
-            <h3>3. Third Normal Form (3NF)</h3>
-            <ul>
-                <li><strong>Rule:</strong> The table must be in 2NF, and no non-key column should depend on another
-                    non-key column (no transitive dependencies like A → B → C).</li>
-                <li><strong>In UniTrack:</strong>
-                    <ul>
-                        <li>In <code>STUDENT</code>, we only store <code>program_id</code>. Program duration and
-                            department are kept in <code>PROGRAM</code>, avoiding transitive links (Student → Program →
-                            Department).</li>
-                        <li>In <code>COURSE_OFFERING</code>, we only store <code>course_id</code>. Course title and
-                            credits are kept in <code>COURSE</code>, avoiding transitive links (Offering → Course →
-                            Credits).</li>
-                        <li>All 11 tables satisfy 3NF with zero data anomalies.</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-
-        <!-- 8. DATABASE IMPLEMENTATION & DATA SUMMARY -->
-        <section class="section-card" id="data-summary">
-            <h2>8. Database Implementation & Data Summary</h2>
-            <h3>8.1 Setup Details</h3>
-            <ul>
-                <li><strong>RDBMS:</strong> MySQL 8.0+</li>
-                <li><strong>Engine:</strong> InnoDB (Supports ACID transactions and Foreign Keys)</li>
-                <li><strong>Data Insertion Order:</strong> Tables were filled in parent-to-child order so foreign key
-                    references never fail.</li>
-            </ul>
-
-            <h3>8.2 Total Data in Database</h3>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Table Name</th>
-                            <th>Row Count</th>
-                            <th>Purpose & Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>DEPARTMENT</code></td>
-                            <td><span class="badge badge-count">5</span></td>
-                            <td>CS, EE, ME, CE, BA departments (all have active HODs).</td>
-                        </tr>
-                        <tr>
-                            <td><code>PROGRAM</code></td>
-                            <td><span class="badge badge-count">8</span></td>
-                            <td>B.Tech, M.Tech, MBA, Ph.D programs.</td>
-                        </tr>
-                        <tr>
-                            <td><code>FACULTY</code></td>
-                            <td><span class="badge badge-count">20</span></td>
-                            <td>Professors, Associate Professors, Assistant Professors.</td>
-                        </tr>
-                        <tr>
-                            <td><code>COURSE</code></td>
-                            <td><span class="badge badge-count">25</span></td>
-                            <td>Core engineering and management subjects.</td>
-                        </tr>
-                        <tr>
-                            <td><code>CLASSROOM</code></td>
-                            <td><span class="badge badge-count">10</span></td>
-                            <td>Lecture halls across campus blocks.</td>
-                        </tr>
-                        <tr>
-                            <td><code>STUDENT</code></td>
-                            <td><span class="badge badge-count">100</span></td>
-                            <td>USNs <code>UT22001</code> to <code>UT25100</code> (Batches 2022 to 2025).</td>
-                        </tr>
-                        <tr>
-                            <td><code>COURSE_OFFERING</code></td>
-                            <td><span class="badge badge-count">30</span></td>
-                            <td>10 classes per semester (Fall 2024, Spring 2025, Fall 2025).</td>
-                        </tr>
-                        <tr>
-                            <td><code>ENROLLMENT</code></td>
-                            <td><span class="badge badge-count">250</span></td>
-                            <td>8 to 10 students registered per class.</td>
-                        </tr>
-                        <tr>
-                            <td><code>ATTENDANCE</code></td>
-                            <td><span class="badge badge-count">2,500</span></td>
-                            <td>10 attendance sessions per enrolled student (2,205 Present [88.2%], 295 Absent [11.8%]).
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><code>ASSIGNMENT</code></td>
-                            <td><span class="badge badge-count">50</span></td>
-                            <td>~2 assignments per course offering section.</td>
-                        </tr>
-                        <tr>
-                            <td><code>SUBMISSION</code></td>
-                            <td><span class="badge badge-count">418</span></td>
-                            <td>Assignment submissions with marks [0 to max_marks]; exactly 12 deliberate unsubmitted
-                                assignments for audit.</td>
-                        </tr>
-                        <tr style="background:#f1f5f9; font-weight:700;">
-                            <td><strong>TOTAL</strong></td>
-                            <td><span class="badge badge-count" style="background:#bbf7d0; color:#14532d;">3,416
-                                    Rows</span></td>
-                            <td><strong>11 Normalized Relations; 100% constraints and relationships verified.</strong>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- 9. SQL QUERIES & RESULTS (Q1–Q10) -->
-        <section class="section-card" id="queries">
-            <h2>9. SQL Queries & Results (Q1–Q10)</h2>
-            <p>This section documents the <strong>10 analytical queries (Q1 to Q10)</strong> developed by
-                <strong>Padmaraju Poojitha (<code>AU25UG-043</code>)</strong>, complete with their SQL syntax, output
-                data tables, execution screenshot proofs, and database analytical findings.
-            </p>
-
-            <!-- Q1 -->
-            <div class="query-box" id="q1">
-                <div class="query-header">
-                    <h3 class="query-title">Q1: Students with the Highest Course Load</h3>
-                    <span class="badge badge-pk">Subquery & ALL</span>
-                </div>
-                <div class="query-why">
-                    <strong>Business Rationale:</strong> Helps academic advisors find students carrying heavy course
-                    loads who might need academic counseling.
-                </div>
-                <pre><code>SELECT s.student_id, s.usn, s.name, COUNT(*) AS course_count
+            <pre><code>SELECT s.student_id, s.usn, s.name, COUNT(*) AS course_count
 FROM STUDENT s
 JOIN ENROLLMENT e ON s.student_id = e.student_id
 GROUP BY s.student_id, s.usn, s.name
@@ -1675,66 +1634,66 @@ HAVING COUNT(*) >= ALL (
     GROUP BY student_id
 )
 ORDER BY course_count DESC;</code></pre>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>student_id</th>
-                                <th>usn</th>
-                                <th>name</th>
-                                <th>course_count</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>13</td>
-                                <td><code>UT22013</code></td>
-                                <td>Saanvi Singh</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>15</td>
-                                <td><code>UT24015</code></td>
-                                <td>Tanvi Mishra</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>16</td>
-                                <td><code>UT25016</code></td>
-                                <td>Varun Reddy</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>17</td>
-                                <td><code>UT22017</code></td>
-                                <td>Vivek Rao</td>
-                                <td>4</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="figure-box">
-                    <img src="../queries/screenshots/q1_output.png" alt="Q1 Query Execution Screenshot">
-                    <figcaption>Figure 9.1: Live MySQL Workbench execution output for Query Q1.</figcaption>
-                </div>
-                <div class="query-finding">
-                    <strong>Analytical Finding:</strong> Exactly 4 students (<code>Saanvi Singh</code>,
-                    <code>Tanvi Mishra</code>, <code>Varun Reddy</code>, <code>Vivek Rao</code>) share the maximum
-                    course load with 4 courses each. All other students take 2 or 3 courses.
-                </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>student_id</th>
+                            <th>usn</th>
+                            <th>name</th>
+                            <th>course_count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>13</td>
+                            <td><code>UT22013</code></td>
+                            <td>Saanvi Singh</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td><code>UT24015</code></td>
+                            <td>Tanvi Mishra</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td><code>UT25016</code></td>
+                            <td>Varun Reddy</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td><code>UT22017</code></td>
+                            <td>Vivek Rao</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div class="figure-box">
+                <img src="../queries/screenshots/q1_output.png" alt="Q1 Query Execution Screenshot">
+                <figcaption>Figure 9.1: Live MySQL Workbench execution output for Query Q1.</figcaption>
+            </div>
+            <div class="query-finding">
+                <strong>Analytical Finding:</strong> Exactly 4 students (<code>Saanvi Singh</code>,
+                <code>Tanvi Mishra</code>, <code>Varun Reddy</code>, <code>Vivek Rao</code>) share the maximum course
+                load with 4 courses each. All other students take 2 or 3 courses.
+            </div>
+        </div>
 
-            <!-- Q2 -->
-            <div class="query-box" id="q2">
-                <div class="query-header">
-                    <h3 class="query-title">Q2: Courses with the Highest Total Enrollment</h3>
-                    <span class="badge badge-fk">Multi-Table Join</span>
-                </div>
-                <div class="query-why">
-                    <strong>Business Rationale:</strong> Shows high-demand courses so administrators can allocate larger
-                    lecture halls or additional faculty sections.
-                </div>
-                <pre><code>SELECT c.course_id, c.code, c.title, COUNT(*) AS enrollment_count
+        <!-- Q2 -->
+        <div class="query-box" id="q2">
+            <div class="query-header">
+                <h3 class="query-title">Q2: Courses with the Highest Total Enrollment</h3>
+                <span class="badge badge-fk">Multi-Table Join</span>
+            </div>
+            <div class="query-why">
+                <strong>Business Rationale:</strong> Shows high-demand courses so administrators can allocate larger
+                lecture halls or additional faculty sections.
+            </div>
+            <pre><code>SELECT c.course_id, c.code, c.title, COUNT(*) AS enrollment_count
 FROM COURSE c
 JOIN COURSE_OFFERING co ON c.course_id = co.course_id
 JOIN ENROLLMENT e ON co.offering_id = e.offering_id
@@ -1746,66 +1705,66 @@ HAVING COUNT(*) >= ALL (
     GROUP BY co2.course_id
 )
 ORDER BY enrollment_count DESC;</code></pre>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>course_id</th>
-                                <th>code</th>
-                                <th>title</th>
-                                <th>enrollment_count</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td><code>CS101</code></td>
-                                <td>Python Programming</td>
-                                <td>17</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><code>CS201</code></td>
-                                <td>Database Management Systems</td>
-                                <td>17</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td><code>CS301</code></td>
-                                <td>Algorithms</td>
-                                <td>17</td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td><code>CS402</code></td>
-                                <td>Machine Learning</td>
-                                <td>17</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="figure-box">
-                    <img src="../queries/screenshots/q2_output.png" alt="Q2 Query Execution Screenshot">
-                    <figcaption>Figure 9.2: Live MySQL Workbench execution output for Query Q2.</figcaption>
-                </div>
-                <div class="query-finding">
-                    <strong>Analytical Finding:</strong> Core Computer Science subjects (<code>CS101</code>,
-                    <code>CS201</code>, <code>CS301</code>, <code>CS402</code>) have the highest demand, each with 17
-                    student enrollments.
-                </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>course_id</th>
+                            <th>code</th>
+                            <th>title</th>
+                            <th>enrollment_count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><code>CS101</code></td>
+                            <td>Python Programming</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><code>CS201</code></td>
+                            <td>Database Management Systems</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><code>CS301</code></td>
+                            <td>Algorithms</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td><code>CS402</code></td>
+                            <td>Machine Learning</td>
+                            <td>17</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div class="figure-box">
+                <img src="../queries/screenshots/q2_output.png" alt="Q2 Query Execution Screenshot">
+                <figcaption>Figure 9.2: Live MySQL Workbench execution output for Query Q2.</figcaption>
+            </div>
+            <div class="query-finding">
+                <strong>Analytical Finding:</strong> Core Computer Science subjects (<code>CS101</code>,
+                <code>CS201</code>, <code>CS301</code>, <code>CS402</code>) have the highest demand, each with 17
+                student enrollments.
+            </div>
+        </div>
 
-            <!-- Q3 -->
-            <div class="query-box" id="q3">
-                <div class="query-header">
-                    <h3 class="query-title">Q3: Faculty Teaching the Most Courses</h3>
-                    <span class="badge badge-pk">Aggregation & MAX</span>
-                </div>
-                <div class="query-why">
-                    <strong>Business Rationale:</strong> Audits faculty teaching allocation to ensure fair distribution
-                    of teaching responsibilities across semesters.
-                </div>
-                <pre><code>SELECT f.faculty_id, f.name, COUNT(*) AS courses_taught
+        <!-- Q3 -->
+        <div class="query-box" id="q3">
+            <div class="query-header">
+                <h3 class="query-title">Q3: Faculty Teaching the Most Courses</h3>
+                <span class="badge badge-pk">Aggregation & MAX</span>
+            </div>
+            <div class="query-why">
+                <strong>Business Rationale:</strong> Audits faculty teaching allocation to ensure fair distribution of
+                teaching responsibilities across semesters.
+            </div>
+            <pre><code>SELECT f.faculty_id, f.name, COUNT(*) AS courses_taught
 FROM FACULTY f
 JOIN COURSE_OFFERING co ON f.faculty_id = co.faculty_id
 GROUP BY f.faculty_id, f.name
@@ -1815,45 +1774,45 @@ HAVING COUNT(*) >= ALL (
     GROUP BY faculty_id
 )
 ORDER BY courses_taught DESC;</code></pre>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>faculty_id</th>
-                                <th>name</th>
-                                <th>courses_taught</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Amelia Patel</td>
-                                <td>14</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="figure-box">
-                    <img src="../queries/screenshots/q3_output.png" alt="Q3 Query Execution Screenshot">
-                    <figcaption>Figure 9.3: Live MySQL Workbench execution output for Query Q3.</figcaption>
-                </div>
-                <div class="query-finding">
-                    <strong>Analytical Finding:</strong> Faculty member <strong>Amelia Patel</strong> taught 14 course
-                    sections across the three semesters.
-                </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>faculty_id</th>
+                            <th>name</th>
+                            <th>courses_taught</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Amelia Patel</td>
+                            <td>14</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div class="figure-box">
+                <img src="../queries/screenshots/q3_output.png" alt="Q3 Query Execution Screenshot">
+                <figcaption>Figure 9.3: Live MySQL Workbench execution output for Query Q3.</figcaption>
+            </div>
+            <div class="query-finding">
+                <strong>Analytical Finding:</strong> Faculty member <strong>Amelia Patel</strong> taught 14 course
+                sections across the three semesters.
+            </div>
+        </div>
 
-            <!-- Q4 -->
-            <div class="query-box" id="q4">
-                <div class="query-header">
-                    <h3 class="query-title">Q4: Average Grade for Each Course</h3>
-                    <span class="badge badge-fk">CASE GPA Mapping</span>
-                </div>
-                <div class="query-why">
-                    <strong>Business Rationale:</strong> Checks whether grading distribution is fair and balanced across
-                    different engineering and management courses.
-                </div>
-                <pre><code>SELECT c.code, c.title,
+        <!-- Q4 -->
+        <div class="query-box" id="q4">
+            <div class="query-header">
+                <h3 class="query-title">Q4: Average Grade for Each Course</h3>
+                <span class="badge badge-fk">CASE GPA Mapping</span>
+            </div>
+            <div class="query-why">
+                <strong>Business Rationale:</strong> Checks whether grading distribution is fair and balanced across
+                different engineering and management courses.
+            </div>
+            <pre><code>SELECT c.code, c.title,
 ROUND(AVG(CASE e.grade
     WHEN 'A' THEN 4
     WHEN 'A-' THEN 3.7
@@ -1871,81 +1830,81 @@ JOIN ENROLLMENT e ON co.offering_id = e.offering_id
 WHERE e.grade <> 'In Progress'
 GROUP BY c.course_id, c.code, c.title
 ORDER BY average_grade DESC;</code></pre>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>code</th>
-                                <th>title</th>
-                                <th>average_grade (4.0 Scale)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><code>EE201</code></td>
-                                <td>Electrical Machines</td>
-                                <td>3.13</td>
-                            </tr>
-                            <tr>
-                                <td><code>EE401</code></td>
-                                <td>Power Electronics</td>
-                                <td>3.13</td>
-                            </tr>
-                            <tr>
-                                <td><code>ME301</code></td>
-                                <td>Fluid Mechanics</td>
-                                <td>3.13</td>
-                            </tr>
-                            <tr>
-                                <td><code>CE201</code></td>
-                                <td>Structural Engineering</td>
-                                <td>3.10</td>
-                            </tr>
-                            <tr>
-                                <td><code>CS301</code></td>
-                                <td>Algorithms</td>
-                                <td>3.05</td>
-                            </tr>
-                            <tr>
-                                <td><code>CS402</code></td>
-                                <td>Machine Learning</td>
-                                <td>3.01</td>
-                            </tr>
-                            <tr>
-                                <td>...</td>
-                                <td><em>(20 Completed Courses in Fall 2024 & Spring 2025)</em></td>
-                                <td>...</td>
-                            </tr>
-                            <tr>
-                                <td><code>CS204</code></td>
-                                <td>Software Engineering</td>
-                                <td>2.74</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="figure-box">
-                    <img src="../queries/screenshots/q4_output.png" alt="Q4 Query Execution Screenshot">
-                    <figcaption>Figure 9.4: Live MySQL Workbench execution output for Query Q4.</figcaption>
-                </div>
-                <div class="query-finding">
-                    <strong>Analytical Finding:</strong> Course GPAs range naturally between 2.74 (<code>CS204</code>)
-                    and 3.13 (<code>EE201</code>, <code>EE401</code>, <code>ME301</code>). Active classes with
-                    <code>'In Progress'</code> grades are cleanly excluded.
-                </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>code</th>
+                            <th>title</th>
+                            <th>average_grade (4.0 Scale)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>EE201</code></td>
+                            <td>Electrical Machines</td>
+                            <td>3.13</td>
+                        </tr>
+                        <tr>
+                            <td><code>EE401</code></td>
+                            <td>Power Electronics</td>
+                            <td>3.13</td>
+                        </tr>
+                        <tr>
+                            <td><code>ME301</code></td>
+                            <td>Fluid Mechanics</td>
+                            <td>3.13</td>
+                        </tr>
+                        <tr>
+                            <td><code>CE201</code></td>
+                            <td>Structural Engineering</td>
+                            <td>3.10</td>
+                        </tr>
+                        <tr>
+                            <td><code>CS301</code></td>
+                            <td>Algorithms</td>
+                            <td>3.05</td>
+                        </tr>
+                        <tr>
+                            <td><code>CS402</code></td>
+                            <td>Machine Learning</td>
+                            <td>3.01</td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td><em>(20 Completed Courses in Fall 2024 & Spring 2025)</em></td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <td><code>CS204</code></td>
+                            <td>Software Engineering</td>
+                            <td>2.74</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div class="figure-box">
+                <img src="../queries/screenshots/q4_output.png" alt="Q4 Query Execution Screenshot">
+                <figcaption>Figure 9.4: Live MySQL Workbench execution output for Query Q4.</figcaption>
+            </div>
+            <div class="query-finding">
+                <strong>Analytical Finding:</strong> Course GPAs range naturally between 2.74 (<code>CS204</code>) and
+                3.13 (<code>EE201</code>, <code>EE401</code>, <code>ME301</code>). Active classes with
+                <code>'In Progress'</code> grades are cleanly excluded.
+            </div>
+        </div>
 
-            <!-- Q5 -->
-            <div class="query-box" id="q5">
-                <div class="query-header">
-                    <h3 class="query-title">Q5: Students with Low Attendance (&lt; 75%)</h3>
-                    <span class="badge badge-pk">Statutory 75% Audit</span>
-                </div>
-                <div class="query-why">
-                    <strong>Business Rationale:</strong> Identifies students who fall below the mandatory 75% attendance
-                    threshold and risk exam debarment.
-                </div>
-                <pre><code>SELECT s.student_id, s.usn, s.name,
+        <!-- Q5 -->
+        <div class="query-box" id="q5">
+            <div class="query-header">
+                <h3 class="query-title">Q5: Students with Low Attendance (&lt; 75%)</h3>
+                <span class="badge badge-pk">Statutory 75% Audit</span>
+            </div>
+            <div class="query-why">
+                <strong>Business Rationale:</strong> Identifies students who fall below the mandatory 75% attendance
+                threshold and risk exam debarment.
+            </div>
+            <pre><code>SELECT s.student_id, s.usn, s.name,
 ROUND(100 * SUM(a.status = 'Present') / COUNT(*), 2) AS attendance
 FROM STUDENT s
 JOIN ENROLLMENT e ON s.student_id = e.student_id
@@ -1953,85 +1912,85 @@ JOIN ATTENDANCE a ON e.enrollment_id = a.enrollment_id
 GROUP BY s.student_id, s.usn, s.name
 HAVING attendance < 75
 ORDER BY attendance;</code></pre>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>student_id</th>
-                                <th>usn</th>
-                                <th>name</th>
-                                <th>attendance (%)</th>
-                                <th>Sessions Present</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>7</td>
-                                <td><code>UT24007</code></td>
-                                <td>Isha Gupta</td>
-                                <td>50.00</td>
-                                <td>15 / 30</td>
-                                <td><span class="badge badge-pk">Critical (&lt; 75%)</span></td>
-                            </tr>
-                            <tr>
-                                <td>15</td>
-                                <td><code>UT24015</code></td>
-                                <td>Tanvi Agarwal</td>
-                                <td>60.00</td>
-                                <td>18 / 30</td>
-                                <td><span class="badge badge-pk">At-Risk (&lt; 75%)</span></td>
-                            </tr>
-                            <tr>
-                                <td>23</td>
-                                <td><code>UT24023</code></td>
-                                <td>Alok Banerjee</td>
-                                <td>60.00</td>
-                                <td>18 / 30</td>
-                                <td><span class="badge badge-pk">At-Risk (&lt; 75%)</span></td>
-                            </tr>
-                            <tr>
-                                <td>31</td>
-                                <td><code>UT24031</code></td>
-                                <td>Gaurav Sen</td>
-                                <td>70.00</td>
-                                <td>21 / 30</td>
-                                <td><span class="badge badge-pk">At-Risk (&lt; 75%)</span></td>
-                            </tr>
-                            <tr>
-                                <td>39</td>
-                                <td><code>UT24039</code></td>
-                                <td>Kunal Oberoi</td>
-                                <td>70.00</td>
-                                <td>21 / 30</td>
-                                <td><span class="badge badge-pk">At-Risk (&lt; 75%)</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="figure-box">
-                    <img src="../queries/screenshots/q5_output.png" alt="Q5 Query Execution Screenshot">
-                    <figcaption>Figure 9.5: Live MySQL Workbench execution output for Query Q5 (captured during
-                        milestone verification testing).</figcaption>
-                </div>
-                <div class="query-finding">
-                    <strong>Analytical Finding:</strong> Exactly 5 students fall below the university 75% cutoff in the
-                    verified 2,500-session dataset, ranging from 50.00% (Isha Gupta, 15/30 sessions) to 70.00% (Gaurav
-                    Sen, Kunal Oberoi), enabling timely intervention.
-                </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>student_id</th>
+                            <th>usn</th>
+                            <th>name</th>
+                            <th>attendance (%)</th>
+                            <th>Sessions Present</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>7</td>
+                            <td><code>UT24007</code></td>
+                            <td>Isha Gupta</td>
+                            <td>50.00</td>
+                            <td>15 / 30</td>
+                            <td><span class="badge badge-pk">Critical (&lt; 75%)</span></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td><code>UT24015</code></td>
+                            <td>Tanvi Agarwal</td>
+                            <td>60.00</td>
+                            <td>18 / 30</td>
+                            <td><span class="badge badge-pk">At-Risk (&lt; 75%)</span></td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td><code>UT24023</code></td>
+                            <td>Alok Banerjee</td>
+                            <td>60.00</td>
+                            <td>18 / 30</td>
+                            <td><span class="badge badge-pk">At-Risk (&lt; 75%)</span></td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td><code>UT24031</code></td>
+                            <td>Gaurav Sen</td>
+                            <td>70.00</td>
+                            <td>21 / 30</td>
+                            <td><span class="badge badge-pk">At-Risk (&lt; 75%)</span></td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td><code>UT24039</code></td>
+                            <td>Kunal Oberoi</td>
+                            <td>70.00</td>
+                            <td>21 / 30</td>
+                            <td><span class="badge badge-pk">At-Risk (&lt; 75%)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div class="figure-box">
+                <img src="../queries/screenshots/q5_output.png" alt="Q5 Query Execution Screenshot">
+                <figcaption>Figure 9.5: Live MySQL Workbench execution output for Query Q5 (captured during milestone
+                    verification testing).</figcaption>
+            </div>
+            <div class="query-finding">
+                <strong>Analytical Finding:</strong> Exactly 5 students fall below the university 75% cutoff in the
+                verified 2,500-session dataset, ranging from 50.00% (Isha Gupta, 15/30 sessions) to 70.00% (Gaurav Sen,
+                Kunal Oberoi), enabling timely intervention.
+            </div>
+        </div>
 
-            <!-- Q6 -->
-            <div class="query-box" id="q6">
-                <div class="query-header">
-                    <h3 class="query-title">Q6: Students Who Have Not Submitted Assignments</h3>
-                    <span class="badge badge-unique">Anti-Join Audit</span>
-                </div>
-                <div class="query-why">
-                    <strong>Business Rationale:</strong> Discovers students who have missed coursework submissions so
-                    instructors can issue deadline reminders.
-                </div>
-                <pre><code>SELECT s.student_id, s.usn, s.name,
+        <!-- Q6 -->
+        <div class="query-box" id="q6">
+            <div class="query-header">
+                <h3 class="query-title">Q6: Students Who Have Not Submitted Assignments</h3>
+                <span class="badge badge-unique">Anti-Join Audit</span>
+            </div>
+            <div class="query-why">
+                <strong>Business Rationale:</strong> Discovers students who have missed coursework submissions so
+                instructors can issue deadline reminders.
+            </div>
+            <pre><code>SELECT s.student_id, s.usn, s.name,
        a.assignment_id, a.title
 FROM STUDENT s
 JOIN ENROLLMENT e ON s.student_id = e.student_id
@@ -2041,149 +2000,149 @@ ON sub.student_id = s.student_id
 AND sub.assignment_id = a.assignment_id
 WHERE sub.submission_id IS NULL
 ORDER BY s.student_id, a.assignment_id;</code></pre>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>student_id</th>
-                                <th>usn</th>
-                                <th>name</th>
-                                <th>assignment_id</th>
-                                <th>title</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>91</td>
-                                <td><code>UT24091</code></td>
-                                <td>Rahul Reddy</td>
-                                <td>42</td>
-                                <td>Assignment 2</td>
-                            </tr>
-                            <tr>
-                                <td>92</td>
-                                <td><code>UT25092</code></td>
-                                <td>Riya Rao</td>
-                                <td>12</td>
-                                <td>Assignment 4</td>
-                            </tr>
-                            <tr>
-                                <td>92</td>
-                                <td><code>UT25092</code></td>
-                                <td>Riya Rao</td>
-                                <td>13</td>
-                                <td>Assignment 1</td>
-                            </tr>
-                            <tr>
-                                <td>92</td>
-                                <td><code>UT25092</code></td>
-                                <td>Riya Rao</td>
-                                <td>27</td>
-                                <td>Assignment 3</td>
-                            </tr>
-                            <tr>
-                                <td>92</td>
-                                <td><code>UT25092</code></td>
-                                <td>Riya Rao</td>
-                                <td>42</td>
-                                <td>Assignment 2</td>
-                            </tr>
-                            <tr>
-                                <td>92</td>
-                                <td><code>UT25092</code></td>
-                                <td>Riya Rao</td>
-                                <td>43</td>
-                                <td>Assignment 3</td>
-                            </tr>
-                            <tr>
-                                <td>93</td>
-                                <td><code>UT22093</code></td>
-                                <td>Saanvi Singh</td>
-                                <td>13</td>
-                                <td>Assignment 1</td>
-                            </tr>
-                            <tr>
-                                <td>93</td>
-                                <td><code>UT22093</code></td>
-                                <td>Saanvi Singh</td>
-                                <td>27</td>
-                                <td>Assignment 3</td>
-                            </tr>
-                            <tr>
-                                <td>93</td>
-                                <td><code>UT22093</code></td>
-                                <td>Saanvi Singh</td>
-                                <td>43</td>
-                                <td>Assignment 3</td>
-                            </tr>
-                            <tr>
-                                <td>94</td>
-                                <td><code>UT23094</code></td>
-                                <td>Siddharth Joshi</td>
-                                <td>13</td>
-                                <td>Assignment 1</td>
-                            </tr>
-                            <tr>
-                                <td>...</td>
-                                <td>...</td>
-                                <td><em>(Students 95 to 100)</em></td>
-                                <td>...</td>
-                                <td>...</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="figure-box">
-                    <img src="../queries/screenshots/q6_output.png" alt="Q6 Query Execution Screenshot">
-                    <figcaption>Figure 9.6: Live MySQL Workbench execution output for Query Q6.</figcaption>
-                </div>
-                <div class="query-finding">
-                    <strong>Analytical Finding:</strong> An anti-join
-                    (<code>LEFT JOIN ... WHERE sub.submission_id IS NULL</code>) accurately isolates all 12 deliberate
-                    unsubmitted coursework records across students.
-                </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>student_id</th>
+                            <th>usn</th>
+                            <th>name</th>
+                            <th>assignment_id</th>
+                            <th>title</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>91</td>
+                            <td><code>UT24091</code></td>
+                            <td>Rahul Reddy</td>
+                            <td>42</td>
+                            <td>Assignment 2</td>
+                        </tr>
+                        <tr>
+                            <td>92</td>
+                            <td><code>UT25092</code></td>
+                            <td>Riya Rao</td>
+                            <td>12</td>
+                            <td>Assignment 4</td>
+                        </tr>
+                        <tr>
+                            <td>92</td>
+                            <td><code>UT25092</code></td>
+                            <td>Riya Rao</td>
+                            <td>13</td>
+                            <td>Assignment 1</td>
+                        </tr>
+                        <tr>
+                            <td>92</td>
+                            <td><code>UT25092</code></td>
+                            <td>Riya Rao</td>
+                            <td>27</td>
+                            <td>Assignment 3</td>
+                        </tr>
+                        <tr>
+                            <td>92</td>
+                            <td><code>UT25092</code></td>
+                            <td>Riya Rao</td>
+                            <td>42</td>
+                            <td>Assignment 2</td>
+                        </tr>
+                        <tr>
+                            <td>92</td>
+                            <td><code>UT25092</code></td>
+                            <td>Riya Rao</td>
+                            <td>43</td>
+                            <td>Assignment 3</td>
+                        </tr>
+                        <tr>
+                            <td>93</td>
+                            <td><code>UT22093</code></td>
+                            <td>Saanvi Singh</td>
+                            <td>13</td>
+                            <td>Assignment 1</td>
+                        </tr>
+                        <tr>
+                            <td>93</td>
+                            <td><code>UT22093</code></td>
+                            <td>Saanvi Singh</td>
+                            <td>27</td>
+                            <td>Assignment 3</td>
+                        </tr>
+                        <tr>
+                            <td>93</td>
+                            <td><code>UT22093</code></td>
+                            <td>Saanvi Singh</td>
+                            <td>43</td>
+                            <td>Assignment 3</td>
+                        </tr>
+                        <tr>
+                            <td>94</td>
+                            <td><code>UT23094</code></td>
+                            <td>Siddharth Joshi</td>
+                            <td>13</td>
+                            <td>Assignment 1</td>
+                        </tr>
+                        <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td><em>(Students 95 to 100)</em></td>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div class="figure-box">
+                <img src="../queries/screenshots/q6_output.png" alt="Q6 Query Execution Screenshot">
+                <figcaption>Figure 9.6: Live MySQL Workbench execution output for Query Q6.</figcaption>
+            </div>
+            <div class="query-finding">
+                <strong>Analytical Finding:</strong> An anti-join
+                (<code>LEFT JOIN ... WHERE sub.submission_id IS NULL</code>) accurately isolates all 12 deliberate
+                unsubmitted coursework records across students.
+            </div>
+        </div>
 
-            <!-- Q7 -->
-            <div class="query-box" id="q7">
-                <div class="query-header">
-                    <h3 class="query-title">Q7: Courses with Zero Enrollment</h3>
-                    <span class="badge badge-fk">Catalog Integrity</span>
-                </div>
-                <div class="query-why">
-                    <strong>Business Rationale:</strong> Audits whether any course in the university catalog is sitting
-                    unused without any students.
-                </div>
-                <pre><code>SELECT c.course_id, c.code, c.title
+        <!-- Q7 -->
+        <div class="query-box" id="q7">
+            <div class="query-header">
+                <h3 class="query-title">Q7: Courses with Zero Enrollment</h3>
+                <span class="badge badge-fk">Catalog Integrity</span>
+            </div>
+            <div class="query-why">
+                <strong>Business Rationale:</strong> Audits whether any course in the university catalog is sitting
+                unused without any students.
+            </div>
+            <pre><code>SELECT c.course_id, c.code, c.title
 FROM COURSE c
 LEFT JOIN COURSE_OFFERING co ON c.course_id = co.course_id
 LEFT JOIN ENROLLMENT e ON co.offering_id = e.offering_id
 GROUP BY c.course_id, c.code, c.title
 HAVING COUNT(e.enrollment_id) = 0;</code></pre>
-                <div class="callout">
-                    <strong>Query Output:</strong> <code>Empty set (0.00 sec)</code>
-                </div>
-                <div class="figure-box">
-                    <img src="../queries/screenshots/q7_output.png" alt="Q7 Query Execution Screenshot">
-                    <figcaption>Figure 9.7: Live MySQL Workbench execution output for Query Q7.</figcaption>
-                </div>
-                <div class="query-finding">
-                    <strong>Analytical Finding:</strong> The query returns an empty set. This verifies that all 25
-                    courses in the university catalog are actively offered and registered.
-                </div>
+            <div class="callout">
+                <strong>Query Output:</strong> <code>Empty set (0.00 sec)</code>
             </div>
+            <div class="figure-box">
+                <img src="../queries/screenshots/q7_output.png" alt="Q7 Query Execution Screenshot">
+                <figcaption>Figure 9.7: Live MySQL Workbench execution output for Query Q7.</figcaption>
+            </div>
+            <div class="query-finding">
+                <strong>Analytical Finding:</strong> The query returns an empty set. This verifies that all 25 courses
+                in the university catalog are actively offered and registered.
+            </div>
+        </div>
 
-            <!-- Q8 -->
-            <div class="query-box" id="q8">
-                <div class="query-header">
-                    <h3 class="query-title">Q8: Courses with the Highest Average Assignment Marks</h3>
-                    <span class="badge badge-pk">Academic Performance</span>
-                </div>
-                <div class="query-why">
-                    <strong>Business Rationale:</strong> Compares student academic achievement across courses to
-                    evaluate assignment scoring trends.
-                </div>
-                <pre><code>SELECT c.code, c.title, ROUND(AVG(s.marks), 2) AS average_marks
+        <!-- Q8 -->
+        <div class="query-box" id="q8">
+            <div class="query-header">
+                <h3 class="query-title">Q8: Courses with the Highest Average Assignment Marks</h3>
+                <span class="badge badge-pk">Academic Performance</span>
+            </div>
+            <div class="query-why">
+                <strong>Business Rationale:</strong> Compares student academic achievement across courses to evaluate
+                assignment scoring trends.
+            </div>
+            <pre><code>SELECT c.code, c.title, ROUND(AVG(s.marks), 2) AS average_marks
 FROM COURSE c
 JOIN COURSE_OFFERING co ON c.course_id = co.course_id
 JOIN ASSIGNMENT a ON co.offering_id = a.offering_id
@@ -2197,45 +2156,45 @@ HAVING AVG(s.marks) >= ALL (
     GROUP BY co2.course_id
 )
 ORDER BY average_marks DESC;</code></pre>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>code</th>
-                                <th>title</th>
-                                <th>average_marks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><code>BA201</code></td>
-                                <td>Financial Management</td>
-                                <td>24.90</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="figure-box">
-                    <img src="../queries/screenshots/q8_output.png" alt="Q8 Query Execution Screenshot">
-                    <figcaption>Figure 9.8: Live MySQL Workbench execution output for Query Q8.</figcaption>
-                </div>
-                <div class="query-finding">
-                    <strong>Analytical Finding:</strong> <code>BA201</code> (Financial Management) achieved the highest
-                    average assignment score across all offerings at <strong>24.90 marks</strong>.
-                </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>code</th>
+                            <th>title</th>
+                            <th>average_marks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>BA201</code></td>
+                            <td>Financial Management</td>
+                            <td>24.90</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div class="figure-box">
+                <img src="../queries/screenshots/q8_output.png" alt="Q8 Query Execution Screenshot">
+                <figcaption>Figure 9.8: Live MySQL Workbench execution output for Query Q8.</figcaption>
+            </div>
+            <div class="query-finding">
+                <strong>Analytical Finding:</strong> <code>BA201</code> (Financial Management) achieved the highest
+                average assignment score across all offerings at <strong>24.90 marks</strong>.
+            </div>
+        </div>
 
-            <!-- Q9 -->
-            <div class="query-box" id="q9">
-                <div class="query-header">
-                    <h3 class="query-title">Q9: Semester with the Highest Student Enrollments</h3>
-                    <span class="badge badge-fk">Capacity Planning</span>
-                </div>
-                <div class="query-why">
-                    <strong>Business Rationale:</strong> Helps university administration plan physical classroom space
-                    and faculty hiring for peak intake semesters.
-                </div>
-                <pre><code>SELECT co.year, co.semester, COUNT(*) AS enrollment_count
+        <!-- Q9 -->
+        <div class="query-box" id="q9">
+            <div class="query-header">
+                <h3 class="query-title">Q9: Semester with the Highest Student Enrollments</h3>
+                <span class="badge badge-fk">Capacity Planning</span>
+            </div>
+            <div class="query-why">
+                <strong>Business Rationale:</strong> Helps university administration plan physical classroom space and
+                faculty hiring for peak intake semesters.
+            </div>
+            <pre><code>SELECT co.year, co.semester, COUNT(*) AS enrollment_count
 FROM COURSE_OFFERING co
 JOIN ENROLLMENT e ON co.offering_id = e.offering_id
 GROUP BY co.year, co.semester
@@ -2246,45 +2205,45 @@ HAVING COUNT(*) >= ALL (
     GROUP BY co2.year, co2.semester
 )
 ORDER BY enrollment_count DESC;</code></pre>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>year</th>
-                                <th>semester</th>
-                                <th>enrollment_count</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>2024</td>
-                                <td>Fall</td>
-                                <td>100</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="figure-box">
-                    <img src="../queries/screenshots/q9_output.png" alt="Q9 Query Execution Screenshot">
-                    <figcaption>Figure 9.9: Live MySQL Workbench execution output for Query Q9.</figcaption>
-                </div>
-                <div class="query-finding">
-                    <strong>Analytical Finding:</strong> <strong>Fall 2024</strong> had the highest student intake with
-                    100 course enrollments (Spring 2025 had 80, Fall 2025 had 70).
-                </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>year</th>
+                            <th>semester</th>
+                            <th>enrollment_count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024</td>
+                            <td>Fall</td>
+                            <td>100</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div class="figure-box">
+                <img src="../queries/screenshots/q9_output.png" alt="Q9 Query Execution Screenshot">
+                <figcaption>Figure 9.9: Live MySQL Workbench execution output for Query Q9.</figcaption>
+            </div>
+            <div class="query-finding">
+                <strong>Analytical Finding:</strong> <strong>Fall 2024</strong> had the highest student intake with 100
+                course enrollments (Spring 2025 had 80, Fall 2025 had 70).
+            </div>
+        </div>
 
-            <!-- Q10 -->
-            <div class="query-box" id="q10">
-                <div class="query-header">
-                    <h3 class="query-title">Q10: Course with the Most Recorded Absences</h3>
-                    <span class="badge badge-pk">Attendance Analytics</span>
-                </div>
-                <div class="query-why">
-                    <strong>Business Rationale:</strong> Highlights challenging subjects or early-morning lecture slots
-                    with high student absenteeism rates.
-                </div>
-                <pre><code>SELECT c.code, c.title, COUNT(*) AS absent_count
+        <!-- Q10 -->
+        <div class="query-box" id="q10">
+            <div class="query-header">
+                <h3 class="query-title">Q10: Course with the Most Recorded Absences</h3>
+                <span class="badge badge-pk">Attendance Analytics</span>
+            </div>
+            <div class="query-why">
+                <strong>Business Rationale:</strong> Highlights challenging subjects or early-morning lecture slots with
+                high student absenteeism rates.
+            </div>
+            <pre><code>SELECT c.code, c.title, COUNT(*) AS absent_count
 FROM COURSE c
 JOIN COURSE_OFFERING co ON c.course_id = co.course_id
 JOIN ENROLLMENT e ON co.offering_id = e.offering_id
@@ -2300,162 +2259,161 @@ HAVING COUNT(*) >= ALL (
     GROUP BY co2.course_id
 )
 ORDER BY absent_count DESC;</code></pre>
-                <div class="table-responsive">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>code</th>
-                                <th>title</th>
-                                <th>absent_count</th>
-                                <th>Absence Share</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><code>CS101</code></td>
-                                <td>Python Programming</td>
-                                <td>22</td>
-                                <td>Highest Absence Rate (7.46% of 295 total absences)</td>
-                            </tr>
-                            <tr>
-                                <td><code>CS201</code></td>
-                                <td>Database Management Systems</td>
-                                <td>20</td>
-                                <td>Second Highest (6.78% of 295 total absences)</td>
-                            </tr>
-                            <tr>
-                                <td><code>CS402</code></td>
-                                <td>Machine Learning</td>
-                                <td>18</td>
-                                <td>Third Highest (6.10% of 295 total absences)</td>
-                            </tr>
-                            <tr>
-                                <td><code>CS401</code></td>
-                                <td>Artificial Intelligence</td>
-                                <td>17</td>
-                                <td>Fourth Highest (5.76% of 295 total absences)</td>
-                            </tr>
-                            <tr>
-                                <td><code>BA101</code></td>
-                                <td>Principles of Management</td>
-                                <td>17</td>
-                                <td>Fourth Highest (5.76% of 295 total absences)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="figure-box">
-                    <img src="../queries/screenshots/q10_output.png" alt="Q10 Query Execution Screenshot">
-                    <figcaption>Figure 9.10: Live MySQL Workbench execution output for Query Q10 (captured during
-                        development milestone testing).</figcaption>
-                </div>
-                <div class="query-finding">
-                    <strong>Analytical Finding:</strong> Across the entire 2,500-session production attendance log,
-                    exactly <strong>295 absences (11.8%)</strong> were recorded. <strong>CS101 (Python
-                        Programming)</strong> recorded the highest overall absences with <strong>22 absences</strong>,
-                    followed closely by <strong>CS201 (Database Management Systems)</strong> with <strong>20
-                        absences</strong>.
-                </div>
-            </div>
-        </section>
-
-        <!-- 10. TESTING & INTEGRITY CHECKS -->
-        <section class="section-card" id="verification">
-            <h2>10. Testing & Integrity Checks</h2>
-            <p>All relational constraints and database rules were systematically verified in MySQL:</p>
-            <ol>
-                <li><strong>Primary & Unique Key Check:</strong> No duplicate student USNs, course codes, or faculty
-                    email addresses exist.</li>
-                <li><strong>Duplicate Enrollment Check:</strong> Verified that no student can register twice in the same
-                    course section (guaranteed by <code>UNIQUE(student_id, offering_id)</code>).</li>
-                <li><strong>Foreign Key Cascade Test:</strong> Deleting a test enrollment record automatically deleted
-                    its linked attendance rows (<code>ON DELETE CASCADE</code>).</li>
-                <li><strong>Foreign Key Restrict Test:</strong> Deleting a student who has active course enrollments was
-                    blocked by MySQL with a foreign key constraint violation (<code>ON DELETE RESTRICT</code>).</li>
-                <li><strong>CHECK Constraints:</strong> Values like negative credits, 0-year programs, and negative
-                    assignment marks are blocked at the engine level.</li>
-            </ol>
-        </section>
-
-        <!-- 11. CONCLUSION & FUTURE WORK -->
-        <section class="section-card" id="conclusion">
-            <h2>11. Conclusion & Future Work</h2>
-            <h3>11.1 Summary</h3>
-            <p>The <strong>UniTrack</strong> database system provides a complete, robust relational solution for
-                university academic management. By organizing data into 11 tables normalized to 3NF, the system prevents
-                duplicate data and ensures all records stay connected and consistent. The 10 analytical SQL queries
-                provide quick, clear answers for university decision-making.</p>
-
-            <h3>11.2 Future Enhancements</h3>
-            <ul>
-                <li><strong>User Logins & Roles:</strong> Add separate login accounts for Students, Teachers, and HODs
-                    with role-based access control.</li>
-                <li><strong>Prerequisites Table:</strong> Add a table to automatically check if a student passed
-                    prerequisite courses before enrolling in advanced subjects.</li>
-                <li><strong>Web Dashboard:</strong> Build a web frontend so students and faculty can access their
-                    attendance and grades directly from their browsers.</li>
-            </ul>
-        </section>
-
-        <!-- 12. TEAM CONTRIBUTIONS -->
-        <section class="section-card" id="team">
-            <h2>12. Team Contributions</h2>
-            <p>This project was conceptualized, designed, implemented, and tested by <strong>Team 4</strong>:</p>
             <div class="table-responsive">
                 <table>
                     <thead>
                         <tr>
-                            <th style="width: 220px;">Team Member & USN</th>
-                            <th style="width: 180px;">Assigned Role</th>
-                            <th>Main Responsibilities & Deliverables</th>
+                            <th>code</th>
+                            <th>title</th>
+                            <th>absent_count</th>
+                            <th>Absence Share</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Konduru Nanda Kishore Raju</strong><br><code>AU25UG-028</code></td>
-                            <td><strong>Team Lead & Report Author</strong></td>
-                            <td>Authored the comprehensive final project report, system requirements, business rules,
-                                and conducted final project audits.</td>
+                            <td><code>CS101</code></td>
+                            <td>Python Programming</td>
+                            <td>22</td>
+                            <td>Highest Absence Rate (7.46% of 295 total absences)</td>
                         </tr>
                         <tr>
-                            <td><strong>Melvin Jacob</strong><br><code>AU25UG-034</code></td>
-                            <td><strong>ER Modeler</strong></td>
-                            <td>Conceptual ER design, Chen notation diagram, and entity classification.</td>
+                            <td><code>CS201</code></td>
+                            <td>Database Management Systems</td>
+                            <td>20</td>
+                            <td>Second Highest (6.78% of 295 total absences)</td>
                         </tr>
                         <tr>
-                            <td><strong>K. Jyoshna</strong><br><code>AU25UG-026</code></td>
-                            <td><strong>Schema Designer</strong></td>
-                            <td>Relational schema, DDL scripts, circular dependency resolution, and data dictionary.
-                            </td>
+                            <td><code>CS402</code></td>
+                            <td>Machine Learning</td>
+                            <td>18</td>
+                            <td>Third Highest (6.10% of 295 total absences)</td>
                         </tr>
                         <tr>
-                            <td><strong>Monica Irala</strong><br><code>AU25UG-037</code></td>
-                            <td><strong>Normalization Lead</strong></td>
-                            <td>Functional dependencies, 1NF/2NF/3NF proofs, and normalization verification.</td>
+                            <td><code>CS401</code></td>
+                            <td>Artificial Intelligence</td>
+                            <td>17</td>
+                            <td>Fourth Highest (5.76% of 295 total absences)</td>
                         </tr>
                         <tr>
-                            <td><strong>Naidile D</strong><br><code>AU25UG-038</code></td>
-                            <td><strong>Data Engineer</strong></td>
-                            <td>Test data creation, insertion order sequencing, and database population.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Padmaraju Poojitha</strong><br><code>AU25UG-043</code></td>
-                            <td><strong>SQL Analyst</strong></td>
-                            <td>Analytical queries Q1–Q10, query optimization, and Workbench execution proofs.</td>
+                            <td><code>BA101</code></td>
+                            <td>Principles of Management</td>
+                            <td>17</td>
+                            <td>Fourth Highest (5.76% of 295 total absences)</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </section>
+            <div class="figure-box">
+                <img src="../queries/screenshots/q10_output.png" alt="Q10 Query Execution Screenshot">
+                <figcaption>Figure 9.10: Live MySQL Workbench execution output for Query Q10 (captured during
+                    development milestone testing).</figcaption>
+            </div>
+            <div class="query-finding">
+                <strong>Analytical Finding:</strong> Across the entire 2,500-session production attendance log, exactly
+                <strong>295 absences (11.8%)</strong> were recorded. <strong>CS101 (Python Programming)</strong>
+                recorded the highest overall absences with <strong>22 absences</strong>, followed closely by
+                <strong>CS201 (Database Management Systems)</strong> with <strong>20 absences</strong>.
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <!-- 10. TESTING & INTEGRITY CHECKS -->
+    <section class="section-card" id="verification">
+        <h2>10. Testing & Integrity Checks</h2>
+        <p>All relational constraints and database rules were systematically verified in MySQL:</p>
+        <ol>
+            <li><strong>Primary & Unique Key Check:</strong> No duplicate student USNs, course codes, or faculty email
+                addresses exist.</li>
+            <li><strong>Duplicate Enrollment Check:</strong> Verified that no student can register twice in the same
+                course section (guaranteed by <code>UNIQUE(student_id, offering_id)</code>).</li>
+            <li><strong>Foreign Key Cascade Test:</strong> Deleting a test enrollment record automatically deleted its
+                linked attendance rows (<code>ON DELETE CASCADE</code>).</li>
+            <li><strong>Foreign Key Restrict Test:</strong> Deleting a student who has active course enrollments was
+                blocked by MySQL with a foreign key constraint violation (<code>ON DELETE RESTRICT</code>).</li>
+            <li><strong>CHECK Constraints:</strong> Values like negative credits, 0-year programs, and negative
+                assignment marks are blocked at the engine level.</li>
+        </ol>
+    </section>
 
-    <!-- CLEAN ACADEMIC FOOTER -->
-    <footer class="site-footer">
-        <p><strong>UniTrack: University Academic Tracking System — Team 4</strong></p>
-        <p>Department of Computer Science & Engineering • DBMS Final Project Report (2024–2025)</p>
-    </footer>
+    <!-- 11. CONCLUSION & FUTURE WORK -->
+    <section class="section-card" id="conclusion">
+        <h2>11. Conclusion & Future Work</h2>
+        <h3>11.1 Summary</h3>
+        <p>The <strong>UniTrack</strong> database system provides a complete, robust relational solution for university
+            academic management. By organizing data into 11 tables normalized to 3NF, the system prevents duplicate data
+            and ensures all records stay connected and consistent. The 10 analytical SQL queries provide quick, clear
+            answers for university decision-making.</p>
+
+        <h3>11.2 Future Enhancements</h3>
+        <ul>
+            <li><strong>User Logins & Roles:</strong> Add separate login accounts for Students, Teachers, and HODs with
+                role-based access control.</li>
+            <li><strong>Prerequisites Table:</strong> Add a table to automatically check if a student passed
+                prerequisite courses before enrolling in advanced subjects.</li>
+            <li><strong>Web Dashboard:</strong> Build a web frontend so students and faculty can access their attendance
+                and grades directly from their browsers.</li>
+        </ul>
+    </section>
+
+    <!-- 12. TEAM CONTRIBUTIONS -->
+    <section class="section-card" id="team">
+        <h2>12. Team Contributions</h2>
+        <p>This project was conceptualized, designed, implemented, and tested by <strong>Team 4</strong>:</p>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 220px;">Team Member & USN</th>
+                        <th style="width: 180px;">Assigned Role</th>
+                        <th>Main Responsibilities & Deliverables</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Konduru Nanda Kishore Raju</strong><br><code>AU25UG-028</code></td>
+                        <td><strong>Team Lead & Report Author</strong></td>
+                        <td>Authored the comprehensive final project report, system requirements, business rules, and
+                            conducted final project audits.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Melvin Jacob</strong><br><code>AU25UG-034</code></td>
+                        <td><strong>ER Modeler</strong></td>
+                        <td>Conceptual ER design, Chen notation diagram, and entity classification.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>K. Jyoshna</strong><br><code>AU25UG-026</code></td>
+                        <td><strong>Schema Designer</strong></td>
+                        <td>Relational schema, DDL scripts, circular dependency resolution, and data dictionary.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Monica Irala</strong><br><code>AU25UG-037</code></td>
+                        <td><strong>Normalization Lead</strong></td>
+                        <td>Functional dependencies, 1NF/2NF/3NF proofs, and normalization verification.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Naidile D</strong><br><code>AU25UG-038</code></td>
+                        <td><strong>Data Engineer</strong></td>
+                        <td>Test data creation, insertion order sequencing, and database population.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Padmaraju Poojitha</strong><br><code>AU25UG-043</code></td>
+                        <td><strong>SQL Analyst</strong></td>
+                        <td>Analytical queries Q1–Q10, query optimization, and Workbench execution proofs.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</div>
+
+<!-- CLEAN ACADEMIC FOOTER -->
+<footer class="site-footer">
+    <p><strong>UniTrack: University Academic Tracking System — Team 4</strong></p>
+    <p>Department of Computer Science & Engineering • DBMS Final Project Report (2024–2025)</p>
+</footer>
 
 </body>
 
-</html>
+</html> -->
+<!--  -->

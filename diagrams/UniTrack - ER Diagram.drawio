@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="MHQ9rx80Zs71jpiVhcd1">
-    <mxGraphModel dx="3962" dy="2027" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3200" pageHeight="2200" math="0" shadow="0">
+    <mxGraphModel dx="3679" dy="1882" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3200" pageHeight="2200" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -505,87 +505,6 @@
         </mxCell>
         <mxCell id="ent_SUBMISSION" parent="1" style="rounded=0;whiteSpace=nowrap;html=1;fontStyle=1;fontSize=14;strokeWidth=2.5;" value="SUBMISSION" vertex="1">
           <mxGeometry height="50" width="170" x="1675" y="1777" as="geometry" />
-        </mxCell>
-        <mxCell id="leg_box" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;fontStyle=1;fontSize=13;strokeWidth=1;" value="Legend" vertex="1">
-          <mxGeometry height="272" width="540" x="2307" y="1621" as="geometry" />
-        </mxCell>
-        <mxCell id="lg_ent" parent="1" style="rounded=0;whiteSpace=nowrap;html=1;fontStyle=1;fontSize=14;strokeWidth=2.5;" value="" vertex="1">
-          <mxGeometry height="28" width="80" x="2337" y="1650" as="geometry" />
-        </mxCell>
-        <mxCell id="lt_00" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="Entity" vertex="1">
-          <mxGeometry height="24" width="52" x="2445" y="1652" as="geometry" />
-        </mxCell>
-        <mxCell id="lg_weak" parent="1" style="shape=ext;margin=4;double=1;whiteSpace=nowrap;html=1;fontStyle=1;fontSize=14;strokeWidth=2.5;" value="" vertex="1">
-          <mxGeometry height="28" width="80" x="2337" y="1692" as="geometry" />
-        </mxCell>
-        <mxCell id="lt_01" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="Weak entity" vertex="1">
-          <mxGeometry height="24" width="87" x="2444" y="1694" as="geometry" />
-        </mxCell>
-        <mxCell id="lg_rel" parent="1" style="rhombus;whiteSpace=nowrap;html=1;fontSize=12;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="36" width="80" x="2337" y="1730" as="geometry" />
-        </mxCell>
-        <mxCell id="lt_02" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="Relationship" vertex="1">
-          <mxGeometry height="24" width="94" x="2444" y="1736" as="geometry" />
-        </mxCell>
-        <mxCell id="lg_ident" parent="1" style="shape=rhombus;double=1;perimeter=rhombusPerimeter;margin=4;whiteSpace=nowrap;html=1;fontSize=12;strokeWidth=2;" value="" vertex="1">
-          <mxGeometry height="36" width="80" x="2337" y="1772" as="geometry" />
-        </mxCell>
-        <mxCell id="lt_03" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="Identifying relationship" vertex="1">
-          <mxGeometry height="24" width="178" x="2440" y="1778" as="geometry" />
-        </mxCell>
-        <mxCell id="lg_card" parent="1" style="text;html=1;fontStyle=1;fontSize=14;align=center;" value="1 / M" vertex="1">
-          <mxGeometry height="28" width="80" x="2337" y="1818" as="geometry" />
-        </mxCell>
-        <mxCell id="lt_04" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="Cardinality (1 : M)" vertex="1">
-          <mxGeometry height="24" width="143" x="2442" y="1820" as="geometry" />
-        </mxCell>
-        <mxCell id="lg_normal" parent="1" style="ellipse;whiteSpace=nowrap;html=1;" value="" vertex="1">
-          <mxGeometry height="32" width="80" x="2622" y="1648" as="geometry" />
-        </mxCell>
-        <mxCell id="lt_10" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="Attribute" vertex="1">
-          <mxGeometry height="24" width="73" x="2730" y="1652" as="geometry" />
-        </mxCell>
-        <mxCell id="lg_key" parent="1" style="ellipse;whiteSpace=nowrap;html=1;fontStyle=4;fontStyle=4;" value="name" vertex="1">
-          <mxGeometry height="32" width="80" x="2622" y="1690" as="geometry" />
-        </mxCell>
-        <mxCell id="lt_11" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="Key attribute (PK)" vertex="1">
-          <mxGeometry height="24" width="136" x="2727" y="1694" as="geometry" />
-        </mxCell>
-        <mxCell id="lg_partial" parent="1" style="ellipse;whiteSpace=nowrap;html=1;" value="&lt;span style=&quot;border-bottom: 1px dotted&quot;&gt;name&lt;/span&gt;" vertex="1">
-          <mxGeometry height="32" width="80" x="2622" y="1732" as="geometry" />
-        </mxCell>
-        <mxCell id="lt_12" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="Partial key" vertex="1">
-          <mxGeometry height="24" width="87" x="2729" y="1736" as="geometry" />
-        </mxCell>
-        <mxCell id="lg_multi" parent="1" style="ellipse;shape=doubleEllipse;whiteSpace=nowrap;html=1;margin=3;" value="" vertex="1">
-          <mxGeometry height="32" width="80" x="2622" y="1774" as="geometry" />
-        </mxCell>
-        <mxCell id="lt_13" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="Multivalued attribute" vertex="1">
-          <mxGeometry height="24" width="157" x="2726" y="1778" as="geometry" />
-        </mxCell>
-        <mxCell id="lg_comp" parent="1" style="ellipse;whiteSpace=nowrap;html=1;" value="" vertex="1">
-          <mxGeometry height="30" width="50" x="2615" y="1817" as="geometry" />
-        </mxCell>
-        <mxCell id="lg_c1" parent="1" style="ellipse;whiteSpace=nowrap;html=1;" value="" vertex="1">
-          <mxGeometry height="18" width="36" x="2682" y="1810" as="geometry" />
-        </mxCell>
-        <mxCell id="lg_c2" parent="1" style="ellipse;whiteSpace=nowrap;html=1;" value="" vertex="1">
-          <mxGeometry height="18" width="36" x="2682" y="1836" as="geometry" />
-        </mxCell>
-        <mxCell id="lg_ce1" edge="1" parent="1" source="lg_comp" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" target="lg_c1" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="lg_ce2" edge="1" parent="1" source="lg_comp" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" target="lg_c2" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="lt_14" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="Composite attribute" vertex="1">
-          <mxGeometry height="24" width="143" x="2726" y="1820" as="geometry" />
-        </mxCell>
-        <mxCell id="lg_fk" parent="1" style="ellipse;whiteSpace=nowrap;html=1;" value="(FK)" vertex="1">
-          <mxGeometry height="32" width="80" x="2622" y="1858" as="geometry" />
-        </mxCell>
-        <mxCell id="lt_15" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;" value="Foreign key attribute" vertex="1">
-          <mxGeometry height="24" width="157" x="2726" y="1862" as="geometry" />
         </mxCell>
         <mxCell id="ZzgPmLu_Yl9UaXwAhzGD-1" parent="1" style="rounded=0;whiteSpace=nowrap;html=1;fontStyle=1;fontSize=14;strokeWidth=2.5;" value="ATTENDANCE" vertex="1">
           <mxGeometry height="50" width="170" x="1003" y="1607" as="geometry" />

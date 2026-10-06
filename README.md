@@ -624,21 +624,18 @@ HAVING COUNT(*) >= ALL (
 )
 ORDER BY absent_count DESC;
 ```
-* **Output (Production Dataset):**
+* **Output:**
 ```
-+-------+-----------------------------+--------------+---------------------------------------+
-| code  | title                       | absent_count | Absence Share                         |
-+-------+-----------------------------+--------------+---------------------------------------+
-| CS101 | Python Programming          |           22 | Highest Absence Rate (7.46% of 295)   |
-| CS201 | Database Management Systems |           20 | Second Highest (6.78% of 295)         |
-| CS402 | Machine Learning            |           18 | Third Highest (6.10% of 295)          |
-| CS401 | Artificial Intelligence     |           17 | Fourth Highest (5.76% of 295)         |
-| BA101 | Principles of Management    |           17 | Fourth Highest (5.76% of 295)         |
-+-------+-----------------------------+--------------+---------------------------------------+
++-------+-----------------------------+--------------+
+| code  | title                       | absent_count |
++-------+-----------------------------+--------------+
+| CS201 | Database Management Systems |            6 |
+| CS402 | Machine Learning            |            6 |
++-------+-----------------------------+--------------+
 ```
 <p align="center"><img src="queries/screenshots/q10_output.png" alt="Q10 Screenshot" width="70%"/></p>
 
-* **Finding:** Across the 2,500-session attendance dataset, **295 absences (11.8%)** were logged, led by **CS101 (Python Programming)** with 22 absences and **CS201 (Database Management Systems)** with 20 absences. *(Note: Figure above reflects the development milestone proof where CS201 and CS402 tied at 6 absences on the initial test seed).*
+* **Finding:** `CS201` (Database Management Systems) and `CS402` (Machine Learning) tied for the highest absence count with **6 recorded absences** each.
 
 [⬆ Return to Table of Contents](#-table-of-contents)
 

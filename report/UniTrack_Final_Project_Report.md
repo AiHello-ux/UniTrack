@@ -680,19 +680,16 @@ HAVING COUNT(*) >= ALL (
 ORDER BY absent_count DESC;
 ```
 
-#### Output (Production Dataset: Courses with Highest Absences):
-| code | title | absent_count | Absence Share |
-| :---: | :--- | :---: | :--- |
-| `CS101` | Python Programming | 22 | Highest Absence Rate (7.46% of 295 total absences) |
-| `CS201` | Database Management Systems | 20 | Second Highest (6.78% of 295 total absences) |
-| `CS402` | Machine Learning | 18 | Third Highest (6.10% of 295 total absences) |
-| `CS401` | Artificial Intelligence | 17 | Fourth Highest (5.76% of 295 total absences) |
-| `BA101` | Principles of Management | 17 | Fourth Highest (5.76% of 295 total absences) |
+#### Output (Courses with Highest Absences):
+| code | title | absent_count |
+| :---: | :--- | :---: |
+| `CS201` | Database Management Systems | 6 |
+| `CS402` | Machine Learning | 6 |
 
 ![Q10 Query Execution Screenshot](../queries/screenshots/q10_output.png)
-*(Figure 9.10: Live MySQL Workbench execution proof captured during development milestone testing)*
+*(Figure 9.10: Live MySQL Workbench execution proof captured during testing)*
 
-- **Finding:** Across the entire 2,500-session production attendance log, exactly **295 absences (11.8%)** were recorded across all course offerings. **CS101 (Python Programming)** recorded the highest overall absences with **22 absences**, followed closely by **CS201 (Database Management Systems)** with **20 absences** and **CS402 (Machine Learning)** with **18 absences**. *(Note: The screenshot above displays the milestone Workbench testing output where CS201 and CS402 tied at 6 absences on the initial test seed).*
+- **Finding:** `CS201` (Database Management Systems) and `CS402` (Machine Learning) tied for the highest absence count with **6 recorded absences** each.
 
 ---
 

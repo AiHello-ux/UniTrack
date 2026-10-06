@@ -659,3 +659,4 @@ This project was developed by **Team 4**:
 ## 📄 License & Academic Integrity
 
 This project is licensed for educational and academic evaluation under the **Database Management Systems Course Curriculum**. All schemas, SQL scripts, normalization proofs, and analytical query implementations represent the authentic, collaborative work of **Team 4**.
+

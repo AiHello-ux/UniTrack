@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
-  <diagram name="Page-1" id="pxhS25XG3hrWPmd3h3qP">
-    <mxGraphModel dx="1030" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3200" pageHeight="2200" math="0" shadow="0">
+  <diagram name="Page-1" id="MHQ9rx80Zs71jpiVhcd1">
+    <mxGraphModel dx="3962" dy="2027" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3200" pageHeight="2200" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -52,8 +52,10 @@
         <mxCell id="e_attr_FACULTY_designation" edge="1" parent="1" source="ent_FACULTY" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" target="attr_FACULTY_designation" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e_attr_FACULTY_email" edge="1" parent="1" source="ent_FACULTY" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" target="attr_FACULTY_email" value="">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="e_attr_FACULTY_email" edge="1" parent="1" source="ent_FACULTY" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1399.0871477366754" y="401.2510662609387" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="e_attr_FACULTY_department_id__FK_" edge="1" parent="1" source="ent_FACULTY" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" target="attr_FACULTY_department_id__FK_" value="">
           <mxGeometry relative="1" as="geometry" />
@@ -95,15 +97,6 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="e_attr_CLASSROOM_capacity" edge="1" parent="1" source="ent_CLASSROOM" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" target="attr_CLASSROOM_capacity" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e_attr_CLASSROOM_location" edge="1" parent="1" source="ent_CLASSROOM" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" target="attr_CLASSROOM_location" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e_attr_CLASSROOM_building" edge="1" parent="1" source="attr_CLASSROOM_location" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" target="attr_CLASSROOM_building" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e_attr_CLASSROOM_room_no" edge="1" parent="1" source="attr_CLASSROOM_location" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" target="attr_CLASSROOM_room_no" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="e_attr_ENROLLMENT_enrollment_id" edge="1" parent="1" source="ent_ENROLLMENT" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" target="attr_ENROLLMENT_enrollment_id" value="">
@@ -273,15 +266,17 @@
             <mxPoint y="-12" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e_rel_Records_ENROLLMENT" edge="1" parent="1" source="ent_ENROLLMENT" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" target="rel_Records" value="1">
+        <mxCell id="e_rel_Records_ENROLLMENT" edge="1" parent="1" source="ent_ENROLLMENT" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" value="1">
           <mxGeometry relative="1" x="-0.32" as="geometry">
             <mxPoint y="-12" as="offset" />
+            <mxPoint x="1088" y="1421" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e_rel_Records_ATTENDANCE" edge="1" parent="1" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" target="rel_Records" value="M">
+        <mxCell id="e_rel_Records_ATTENDANCE" edge="1" parent="1" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" value="M">
           <mxGeometry relative="1" x="-0.34" as="geometry">
             <mxPoint y="-12" as="offset" />
             <mxPoint x="1088" y="1609" as="sourcePoint" />
+            <mxPoint x="1088" y="1483" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e_rel_Receives_ASSIGNMENT" edge="1" parent="1" source="ent_ASSIGNMENT" style="endArrow=none;html=1;strokeWidth=1.5;fontStyle=1;fontSize=14;" target="rel_Receives" value="1">
@@ -349,9 +344,6 @@
         <mxCell id="attr_FACULTY_designation" parent="1" style="ellipse;whiteSpace=nowrap;html=1;" value="designation" vertex="1">
           <mxGeometry height="40" width="129" x="1312" y="208" as="geometry" />
         </mxCell>
-        <mxCell id="attr_FACULTY_email" parent="1" style="ellipse;shape=doubleEllipse;whiteSpace=nowrap;html=1;margin=3;" value="email" vertex="1">
-          <mxGeometry height="40" width="89" x="1399" y="380" as="geometry" />
-        </mxCell>
         <mxCell id="attr_FACULTY_department_id__FK_" parent="1" style="ellipse;whiteSpace=nowrap;html=1;" value="department_id (FK)" vertex="1">
           <mxGeometry height="40" width="192" x="680" y="328" as="geometry" />
         </mxCell>
@@ -393,15 +385,6 @@
         </mxCell>
         <mxCell id="attr_CLASSROOM_capacity" parent="1" style="ellipse;whiteSpace=nowrap;html=1;" value="capacity" vertex="1">
           <mxGeometry height="40" width="102" x="2285" y="1043" as="geometry" />
-        </mxCell>
-        <mxCell id="attr_CLASSROOM_location" parent="1" style="ellipse;whiteSpace=nowrap;html=1;" value="location" vertex="1">
-          <mxGeometry height="40" width="102" x="2592" y="822" as="geometry" />
-        </mxCell>
-        <mxCell id="attr_CLASSROOM_building" parent="1" style="ellipse;whiteSpace=nowrap;html=1;" value="building" vertex="1">
-          <mxGeometry height="40" width="102" x="2890" y="688" as="geometry" />
-        </mxCell>
-        <mxCell id="attr_CLASSROOM_room_no" parent="1" style="ellipse;whiteSpace=nowrap;html=1;" value="room_no" vertex="1">
-          <mxGeometry height="40" width="93" x="2894" y="956" as="geometry" />
         </mxCell>
         <mxCell id="attr_ENROLLMENT_enrollment_id" parent="1" style="ellipse;whiteSpace=nowrap;html=1;fontStyle=4;" value="enrollment_id" vertex="1">
           <mxGeometry height="40" width="147" x="702" y="1187" as="geometry" />
@@ -486,9 +469,6 @@
         </mxCell>
         <mxCell id="rel_Registers" parent="1" style="rhombus;whiteSpace=nowrap;html=1;fontSize=12;strokeWidth=2;" value="Registers" vertex="1">
           <mxGeometry height="62" width="156" x="674" y="1507" as="geometry" />
-        </mxCell>
-        <mxCell id="rel_Records" parent="1" style="shape=rhombus;double=1;perimeter=rhombusPerimeter;margin=4;whiteSpace=nowrap;html=1;fontSize=12;strokeWidth=2;" value="Records" vertex="1">
-          <mxGeometry height="62" width="128" x="1024" y="1421" as="geometry" />
         </mxCell>
         <mxCell id="rel_Receives" parent="1" style="rhombus;whiteSpace=nowrap;html=1;fontSize=12;strokeWidth=2;" value="Receives" vertex="1">
           <mxGeometry height="62" width="142" x="1689" y="1507" as="geometry" />
@@ -609,6 +589,39 @@
         </mxCell>
         <mxCell id="ZzgPmLu_Yl9UaXwAhzGD-1" parent="1" style="rounded=0;whiteSpace=nowrap;html=1;fontStyle=1;fontSize=14;strokeWidth=2.5;" value="ATTENDANCE" vertex="1">
           <mxGeometry height="50" width="170" x="1003" y="1607" as="geometry" />
+        </mxCell>
+        <mxCell id="y4uGdjTJyoFd-yB6ctSN-1" parent="1" style="rhombus;whiteSpace=nowrap;html=1;fontSize=12;strokeWidth=2;" value="Records" vertex="1">
+          <mxGeometry height="62" width="142" x="1017" y="1422" as="geometry" />
+        </mxCell>
+        <mxCell id="qBfxrNzSF_U9_DPafI3B-1" parent="1" style="ellipse;whiteSpace=nowrap;html=1;" value="attendance_id(PK)" vertex="1">
+          <mxGeometry height="40" width="192" x="780" y="1566" as="geometry" />
+        </mxCell>
+        <mxCell id="qBfxrNzSF_U9_DPafI3B-3" edge="1" parent="1" source="qBfxrNzSF_U9_DPafI3B-1" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="970" y="1530" as="sourcePoint" />
+            <mxPoint x="1000" y="1610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5xMET99qMnwhpRMutSqK-1" parent="1" style="ellipse;whiteSpace=nowrap;html=1;" value="email" vertex="1">
+          <mxGeometry height="40" width="66" x="1391" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="Jb6TsAnbkuWBjYu1meLK-1" edge="1" parent="1" source="ent_CLASSROOM" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="Jb6TsAnbkuWBjYu1meLK-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2430" y="930" as="sourcePoint" />
+            <mxPoint x="2520" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Jb6TsAnbkuWBjYu1meLK-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="building&amp;nbsp;" vertex="1">
+          <mxGeometry height="40" width="120" x="2550" y="777" as="geometry" />
+        </mxCell>
+        <mxCell id="Jb6TsAnbkuWBjYu1meLK-3" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="ent_CLASSROOM" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2550" y="880" as="sourcePoint" />
+            <mxPoint x="2480" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Jb6TsAnbkuWBjYu1meLK-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="&amp;nbsp;room_&lt;span style=&quot;text-decoration-line: inherit; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;no&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="120" x="2550" y="860" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

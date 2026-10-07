@@ -153,34 +153,12 @@ Represents individual student submissions against designated coursework assignme
 | `assignment_id` | **FK** | `INT` | No | Assignment being submitted; references `ASSIGNMENT(assignment_id)` |
 | `student_id` | **FK** | `INT` | No | Submitting student; references `STUDENT(student_id)` |
 
----
-
-## 2. Relationships and Cardinality Matrix
-
-All 14 relationships established in the conceptual Chen ER diagram are mapped losslessly into the relational model:
-
-| Relationship | Participating Entities | Cardinality | Business Meaning & Rule |
-| :--- | :--- | :---: | :--- |
-| **Offers** | `DEPARTMENT`, `PROGRAM` | 1:M | A department offers many academic programmes; each programme belongs to exactly one department. |
-| **Owns** | `DEPARTMENT`, `COURSE` | 1:M | A department owns many courses; each course is cataloged under one department. |
-| **Employs** | `DEPARTMENT`, `FACULTY` | 1:M | A department employs multiple faculty members; each faculty member belongs to one home department. |
-| **Heads** | `DEPARTMENT`, `FACULTY` | 1:1 | A department is chaired by one Head of Department (HOD); an individual faculty member can head at most one department. |
-| **Admits** | `PROGRAM`, `STUDENT` | 1:M | A degree programme admits many students; each student matriculates under exactly one programme. |
-| **Scheduled As** | `COURSE`, `COURSE_OFFERING` | 1:M | A catalog course can be offered across multiple semesters; each offering is an instance of one course. |
-| **Teaches** | `FACULTY`, `COURSE_OFFERING` | 1:M | A faculty member instructs multiple course offerings; each course offering section has one assigned instructor. |
-| **Hosts** | `CLASSROOM`, `COURSE_OFFERING` | 1:M | A classroom hosts multiple course offering time slots; each offering takes place in one assigned classroom. |
-| **Registers** | `STUDENT`, `ENROLLMENT` | 1:M | A student registers for multiple course enrollments; each enrollment belongs to one student. |
-| **Contains** | `COURSE_OFFERING`, `ENROLLMENT` | 1:M | A course offering section contains many student enrollments; each enrollment belongs to one offering. |
-| **Sets** | `COURSE_OFFERING`, `ASSIGNMENT` | 1:M | An offering section issues multiple coursework assignments; each assignment belongs to one offering. |
-| **Records** | `ENROLLMENT`, `ATTENDANCE` | 1:M | An enrollment maintains multiple daily attendance logs; each attendance entry belongs to one enrollment. |
-| **Receives** | `ASSIGNMENT`, `SUBMISSION` | 1:M | An assignment receives multiple student submissions; each submission corresponds to one assignment. |
-| **Submits** | `STUDENT`, `SUBMISSION` | 1:M | A student uploads multiple assignment submissions; each submission is attributed to one student. |
 
 ---
 
-## 3. Architectural Design Rationales
+## 2. Architectural Design Rationales
 
-### 3.1. Resolution of the Circular Foreign Key Dependency
+### 2.1. Resolution of the Circular Foreign Key Dependency
 - **Problem:** A mutually recursive dependency exists between `DEPARTMENT` and `FACULTY`:
   - `DEPARTMENT.hod_faculty_id` references `FACULTY.faculty_id`.
   - `FACULTY.department_id` references `DEPARTMENT.department_id`.
@@ -202,7 +180,7 @@ All 14 relationships established in the conceptual Chen ER diagram are mapped lo
 
 ---
 
-### 3.2. Separation of Courses from Semester Offerings
+### 2.2. Separation of Courses from Semester Offerings
 - **Design Decision:** The system splits course management into two distinct entities:
   - `COURSE`: Master course catalog definition (`course_id`, `code`, `title`, `credits`, `department_id`).
   - `COURSE_OFFERING`: Specific temporal term section (`offering_id`, `course_id`, `faculty_id`, `classroom_id`, `semester`, `year`).
@@ -210,7 +188,7 @@ All 14 relationships established in the conceptual Chen ER diagram are mapped lo
 
 ---
 
-### 3.3. Direct Attendance Linking via Enrollment Bridge
+### 2.3. Direct Attendance Linking via Enrollment Bridge
 - **Design Decision:** `ATTENDANCE` references `ENROLLMENT(enrollment_id)` rather than storing composite `(student_id, offering_id, class_date)`.
 - **Rationale:**
   - If `ATTENDANCE` referenced `STUDENT` and `COURSE_OFFERING` independently, an application bug or rogue query could insert an attendance log for a student in a course offering they were never registered in.
@@ -218,7 +196,7 @@ All 14 relationships established in the conceptual Chen ER diagram are mapped lo
 
 ---
 
-### 3.4. Surrogate Primary Keys vs. Composite Natural Keys
+### 2.4. Surrogate Primary Keys vs. Composite Natural Keys
 - **Design Decision:** All 11 relations utilize single-column integer surrogate primary keys (`table_id`), combined with explicit `UNIQUE` candidate key constraints where natural uniqueness exists (e.g., `STUDENT.usn`, `COURSE.code`, `FACULTY.email`, `(student_id, offering_id)`).
 - **Rationale:**
   - **Index Efficiency:** In MySQL's InnoDB storage engine, secondary indexes store the clustered index key. Using compact integer primary keys minimizes B-tree index depth and I/O overhead.
@@ -227,7 +205,7 @@ All 14 relationships established in the conceptual Chen ER diagram are mapped lo
 
 ---
 
-### 3.5. Default Constraints for Academic Workflows
+### 2.5. Default Constraints for Academic Workflows
 - **Design Decision:** Incorporating standard default values for key attributes:
   - `PROGRAM.duration_years`: `DEFAULT 4` (standard undergraduate bachelor's degree duration).
   - `COURSE.credits`: `DEFAULT 3` (standard lecture credit weight).
@@ -238,28 +216,7 @@ All 14 relationships established in the conceptual Chen ER diagram are mapped lo
 
 ---
 
-## 4. Referential Integrity Policy Matrix
-
-| Foreign Key Constraint | Source Table & Column | Target Table & Column | ON UPDATE | ON DELETE | Architectural Justification |
-| :--- | :--- | :--- | :---: | :---: | :--- |
-| `fk_program_department` | `PROGRAM(department_id)` | `DEPARTMENT(department_id)` | `CASCADE` | `RESTRICT` | Prevent deletion of a department while it still hosts active degree programs. |
-| `fk_faculty_department` | `FACULTY(department_id)` | `DEPARTMENT(department_id)` | `CASCADE` | `RESTRICT` | Prevent orphaned faculty records if a department is targeted for deletion. |
-| `fk_course_department` | `COURSE(department_id)` | `DEPARTMENT(department_id)` | `CASCADE` | `RESTRICT` | Prevent deletion of a department while its academic courses remain in the catalog. |
-| `fk_department_hod` | `DEPARTMENT(hod_faculty_id)` | `FACULTY(faculty_id)` | `CASCADE` | `SET NULL` | If an HOD retires or leaves, the department remains intact; headship becomes temporarily vacant (`NULL`). |
-| `fk_student_program` | `STUDENT(program_id)` | `PROGRAM(program_id)` | `CASCADE` | `RESTRICT` | A degree program cannot be purged if active students are matriculated within it. |
-| `fk_offering_course` | `COURSE_OFFERING(course_id)` | `COURSE(course_id)` | `CASCADE` | `RESTRICT` | Historical semester offerings must preserve their catalog course linkage. |
-| `fk_offering_faculty` | `COURSE_OFFERING(faculty_id)` | `FACULTY(faculty_id)` | `CASCADE` | `RESTRICT` | Prevents removing faculty records that are assigned to past or current semester offerings. |
-| `fk_offering_classroom` | `COURSE_OFFERING(classroom_id)` | `CLASSROOM(classroom_id)` | `CASCADE` | `RESTRICT` | Classrooms cannot be deleted while assigned to scheduled course offerings. |
-| `fk_enrollment_student` | `ENROLLMENT(student_id)` | `STUDENT(student_id)` | `CASCADE` | `RESTRICT` | Protects academic transcripts; students with enrollment records cannot be deleted accidentally. |
-| `fk_enrollment_offering` | `ENROLLMENT(offering_id)` | `COURSE_OFFERING(offering_id)` | `CASCADE` | `RESTRICT` | Offerings with enrolled students cannot be dropped from the system. |
-| `fk_attendance_enrollment` | `ATTENDANCE(enrollment_id)` | `ENROLLMENT(enrollment_id)` | `CASCADE` | `RESTRICT` | Attendance history is strictly bounded by active course enrollments. |
-| `fk_assignment_offering` | `ASSIGNMENT(offering_id)` | `COURSE_OFFERING(offering_id)` | `CASCADE` | `RESTRICT` | Coursework assignments must be anchored to an offering. |
-| `fk_submission_assignment` | `SUBMISSION(assignment_id)` | `ASSIGNMENT(assignment_id)` | `CASCADE` | `RESTRICT` | Student submissions cannot be orphaned from their parent assignment. |
-| `fk_submission_student` | `SUBMISSION(student_id)` | `STUDENT(student_id)` | `CASCADE` | `RESTRICT` | Student attribution on submitted coursework is permanently preserved. |
-
----
-
-## 5. DDL Implementation Blueprint
+## 3. DDL Implementation Blueprint
 
 The physical schema is implemented in [`schema/create_tables.sql`](create_tables.sql). The script follows strict sequential stages:
 1. `DROP DATABASE IF EXISTS unitrack;` & `CREATE DATABASE unitrack;`

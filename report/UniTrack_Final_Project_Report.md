@@ -355,10 +355,10 @@ Normalization is the process of organizing tables to stop duplicate data and avo
 | `STUDENT` | **100** | USNs `UT22001` to `UT25100` (Batches 2022 to 2025). |
 | `COURSE_OFFERING` | **30** | 10 classes per semester (Fall 2024, Spring 2025, Fall 2025). |
 | `ENROLLMENT` | **250** | 8 to 10 students registered per class. |
-| `ATTENDANCE` | **2,500** | 10 attendance sessions per enrolled student (2,205 Present [88.2%], 295 Absent [11.8%]). |
+| `ATTENDANCE` | **400** | 400 attendance sessions across courses (320 Present [80.0%], 80 Absent [20.0%]). |
 | `ASSIGNMENT` | **50** | ~2 assignments per course offering section. |
-| `SUBMISSION` | **418** | Assignment submissions with marks [0 to max_marks]; exactly 12 deliberate unsubmitted assignments for audit. |
-| **TOTAL** | **3,416 Rows** | **11 Normalized Relations; 100% of constraints and relationships verified.** |
+| `SUBMISSION` | **102** | Assignment submissions with marks [0 to max_marks]; remaining assignments unsubmitted for audit. |
+| **TOTAL** | **1,000 Rows** | **11 Normalized Relations; 100% of constraints and relationships verified.** |
 
 ---
 
@@ -518,19 +518,33 @@ HAVING attendance < 75
 ORDER BY attendance;
 ```
 
-#### Output (Production Dataset: Students with Attendance < 75%):
-| student_id | usn | name | attendance (%) | Sessions Present | Status |
-| :---: | :---: | :--- | :---: | :---: | :---: |
-| 7 | `UT24007` | Isha Gupta | 50.00 | 15 / 30 | Critical (< 75%) |
-| 15 | `UT24015` | Tanvi Agarwal | 60.00 | 18 / 30 | At-Risk (< 75%) |
-| 23 | `UT24023` | Alok Banerjee | 60.00 | 18 / 30 | At-Risk (< 75%) |
-| 31 | `UT24031` | Gaurav Sen | 70.00 | 21 / 30 | At-Risk (< 75%) |
-| 39 | `UT24039` | Kunal Oberoi | 70.00 | 21 / 30 | At-Risk (< 75%) |
+#### Output (Students with Attendance < 75%):
+| student_id | usn | name | attendance (%) | Status |
+| :---: | :---: | :--- | :---: | :---: |
+| 83 | `UT24083` | Ananya Singh | 33.33 | Critical (< 75%) |
+| 93 | `UT22093` | Saanvi Singh | 33.33 | Critical (< 75%) |
+| 98 | `UT23098` | Zoya Singh | 33.33 | Critical (< 75%) |
+| 22 | `UT23022` | Aditya Rao | 40.00 | Critical (< 75%) |
+| 78 | `UT23078` | Zoya Singh | 40.00 | Critical (< 75%) |
+| 27 | `UT24027` | Isha Rao | 50.00 | At-Risk (< 75%) |
+| 48 | `UT25048` | Kavya Singh | 50.00 | At-Risk (< 75%) |
+| 13 | `UT22013` | Saanvi Singh | 57.14 | At-Risk (< 75%) |
+| 15 | `UT24015` | Tanvi Mishra | 57.14 | At-Risk (< 75%) |
+| 8 | `UT25008` | Kavya Singh | 60.00 | At-Risk (< 75%) |
+| 29 | `UT22029` | Meera Joshi | 60.00 | At-Risk (< 75%) |
+| 31 | `UT24031` | Rahul Reddy | 60.00 | At-Risk (< 75%) |
+| 36 | `UT25036` | Varun Reddy | 60.00 | At-Risk (< 75%) |
+| 43 | `UT24043` | Ananya Singh | 60.00 | At-Risk (< 75%) |
+| 50 | `UT23050` | Nikhil Mishra | 60.00 | At-Risk (< 75%) |
+| 57 | `UT22057` | Vivek Rao | 60.00 | At-Risk (< 75%) |
+| 64 | `UT25064` | Anika Joshi | 60.00 | At-Risk (< 75%) |
+| 71 | `UT24071` | Rahul Reddy | 60.00 | At-Risk (< 75%) |
+| 73 | `UT22073` | Saanvi Singh | 60.00 | At-Risk (< 75%) |
 
 ![Q5 Query Execution Screenshot](../queries/screenshots/q5_output.png)
-*(Figure 9.5: Live MySQL Workbench execution proof captured during development milestone testing)*
+*(Figure 9.5: Live MySQL Workbench execution proof captured during testing)*
 
-- **Finding:** Enforces statutory university policy requiring $\ge 75\%$ class attendance for semester examination eligibility. In the consolidated production database (`data/insert_data.sql`), exactly 5 students fall below the cutoff, ranging from **50.00%** (Isha Gupta, 15/30 sessions) to **70.00%** (Gaurav Sen and Kunal Oberoi, 21/30 sessions), enabling timely academic counseling. *(Note: The screenshot above reflects the milestone Workbench execution proof captured during earlier testing).*
+- **Finding:** Enforces statutory university policy requiring $\ge 75\%$ class attendance for semester examination eligibility. In the dataset (`data/insert_data.sql`), students falling below the cutoff start at **33.33%** (`Ananya Singh`, `Saanvi Singh`, `Zoya Singh`), followed by **40.00%** (`Aditya Rao`, `Zoya Singh`), **50.00%** (`Isha Rao`, `Kavya Singh`), and **57.14%** (`Saanvi Singh`, `Tanvi Mishra`), enabling timely academic counseling and intervention.
 
 ---
 

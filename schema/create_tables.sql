@@ -19,7 +19,7 @@ USE unitrack;
 CREATE TABLE DEPARTMENT (
     department_id INT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
-    hod_faculty_id INT
+    hod_faculty_id INT UNIQUE
 );
 
 -- 5. PROGRAM

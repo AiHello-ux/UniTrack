@@ -180,25 +180,6 @@ Represents individual student submissions against designated coursework assignme
 
 ---
 
-### 2.2. Separation of Courses from Semester Offerings
-- **Design Decision:** The system splits course management into two distinct entities:
-  - `COURSE`: Master course catalog definition (`course_id`, `code`, `title`, `credits`, `department_id`).
-  - `COURSE_OFFERING`: Specific temporal term section (`offering_id`, `course_id`, `faculty_id`, `classroom_id`, `semester`, `year`).
-- **Rationale:** A course such as *Database Management Systems (CS201)* has static academic attributes that persist for decades. However, its semester offerings change dynamically by instructor, room, and term. Merging them into a single relation would introduce severe redundancy and violate 2NF, requiring credits and titles to be repeated across every offering.
-
----
-
-### 23.. Default Constraints for Academic Workflows
-- **Design Decision:** Incorporating standard default values for key attributes:
-  - `PROGRAM.duration_years`: `DEFAULT 4` (standard undergraduate bachelor's degree duration).
-  - `COURSE.credits`: `DEFAULT 3` (standard lecture credit weight).
-  - `ENROLLMENT.grade`: `DEFAULT 'In Progress'` (default lifecycle state until semester grading concludes).
-  - `ATTENDANCE.status`: `DEFAULT 'Present'` (standard assumption during class attendance calls).
-  - `SUBMISSION.submitted_on`: `DEFAULT CURRENT_TIMESTAMP` (automated timestamping upon file upload).
-- **Rationale:** Eliminates boilerplate in client applications, prevents unintended NULLs in analytical queries, and satisfies Stage 4 constraint criteria.
-
----
-
 ## 3. DDL Implementation Blueprint
 
 The physical schema is implemented in [`schema/create_tables.sql`](create_tables.sql). The script follows strict sequential stages:

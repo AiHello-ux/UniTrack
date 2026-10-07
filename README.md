@@ -32,7 +32,7 @@
 > **Course:** Database Management Systems (DBMS) • Academic Year 2024–2025  
 > **Target RDBMS:** MySQL 8.0+ (InnoDB Engine)  
 > **Normalisation Level:** Third Normal Form (3NF)  
-> **Scope:** 11 Relations • 14 Foreign Keys • 3 Semesters (Fall 2024 – Fall 2025) • 3,416 Total Rows  
+> **Scope:** 11 Relations • 14 Foreign Keys • 3 Semesters (Fall 2024 – Fall 2025) • 1,000 Total Rows  
 > **Team Lead & Master Report Author:** Konduru Nanda Kishore Raju (`AU25UG-028`)
 
 ---
@@ -113,7 +113,7 @@ UniTrack-main/
 │   └── UniTrack_Logical_Design_Design_Rationale.md # Detailed logical schema design report
 │
 ├── data/
-│   └── insert_data.sql                  # Production DML script (3,416 rows across 3 terms in FK-safe order)
+│   └── insert_data.sql                  # Production DML script (1,000 rows across 3 terms in FK-safe order)
 │
 ├── diagrams/
 │   ├── ER_Diagram.png                   # Conceptual Peter Chen ER Diagram (authored by Melvin Jacob)
@@ -184,10 +184,10 @@ The table below summarizes all 11 relations defined in [`schema/create_tables.sq
 | 6 | `STUDENT` | `student_id` | `program_id` → `PROGRAM` (`RESTRICT`, `CASCADE`) | `usn` UNIQUE, `name`, `admission_year` | **100** |
 | 7 | `COURSE_OFFERING` | `offering_id` | `course_id` → `COURSE`<br/>`faculty_id` → `FACULTY`<br/>`classroom_id` → `CLASSROOM` (`RESTRICT`) | `semester`, `year` NOT NULL | **30** |
 | 8 | `ENROLLMENT` | `enrollment_id` | `student_id` → `STUDENT`<br/>`offering_id` → `COURSE_OFFERING` (`RESTRICT`) | `UNIQUE(student_id, offering_id)`<br/>`grade` Default: `'In Progress'` | **250** |
-| 9 | `ATTENDANCE` | `attendance_id` | `enrollment_id` → `ENROLLMENT` (`CASCADE`, `CASCADE`) | `status` IN ('Present', 'Absent')<br/>`class_date` NOT NULL | **2,500** |
+| 9 | `ATTENDANCE` | `attendance_id` | `enrollment_id` → `ENROLLMENT` (`CASCADE`, `CASCADE`) | `status` IN ('Present', 'Absent')<br/>`class_date` NOT NULL | **400** |
 | 10 | `ASSIGNMENT` | `assignment_id` | `offering_id` → `COURSE_OFFERING` (`RESTRICT`, `CASCADE`) | `max_marks > 0`, `title`, `due_date` | **50** |
-| 11 | `SUBMISSION` | `submission_id` | `assignment_id` → `ASSIGNMENT`<br/>`student_id` → `STUDENT` (`RESTRICT`, `CASCADE`) | `marks` DECIMAL(5,2)<br/>`submitted_on` Default: CURRENT_TIMESTAMP | **418** |
-| | **TOTAL** | | **14 Foreign Keys** | **Zero Anomalies** | **3,416 Rows** |
+| 11 | `SUBMISSION` | `submission_id` | `assignment_id` → `ASSIGNMENT`<br/>`student_id` → `STUDENT` (`RESTRICT`, `CASCADE`) | `marks` DECIMAL(5,2)<br/>`submitted_on` Default: CURRENT_TIMESTAMP | **102** |
+| | **TOTAL** | | **14 Foreign Keys** | **Zero Anomalies** | **1,000 Rows** |
 
 ### Architectural Design Decisions
 
@@ -272,7 +272,7 @@ mysql> SOURCE schema/create_tables.sql;
 # Output: Query OK, 11 tables created with 14 foreign keys.
 
 mysql> SOURCE data/insert_data.sql;
-# Output: Query OK, 3,416 rows inserted across 11 tables.
+# Output: Query OK, 1,000 rows inserted across 11 tables.
 
 mysql> SOURCE queries/queries.sql;
 # Output: Executes the 10 analytical business queries (Q1–Q10).
@@ -298,7 +298,7 @@ UNION ALL SELECT 'ASSIGNMENT', COUNT(*) FROM ASSIGNMENT
 UNION ALL SELECT 'SUBMISSION', COUNT(*) FROM SUBMISSION;
 ```
 
-Expected result: **11 tables, 3,416 total rows** (Attendance: 2,500; Submissions: 418; Enrollments: 250; Students: 100).
+Expected result: **11 tables, 1,000 total rows** (Attendance: 400; Submissions: 102; Enrollments: 250; Students: 100).
 
 [⬆ Return to Table of Contents](#-table-of-contents)
 
@@ -464,19 +464,23 @@ ORDER BY attendance;
 ```
 * **Output (Production Dataset):**
 ```
-+------------+---------+---------------+----------------+-------------------+-----------------+
-| student_id | usn     | name          | attendance (%) | Sessions Present  | Status          |
-+------------+---------+---------------+----------------+-------------------+-----------------+
-|          7 | UT24007 | Isha Gupta    |          50.00 | 15 / 30 sessions  | Critical (< 75%)|
-|         15 | UT24015 | Tanvi Agarwal |          60.00 | 18 / 30 sessions  | At-Risk (< 75%) |
-|         23 | UT24023 | Alok Banerjee |          60.00 | 18 / 30 sessions  | At-Risk (< 75%) |
-|         31 | UT24031 | Gaurav Sen    |          70.00 | 21 / 30 sessions  | At-Risk (< 75%) |
-|         39 | UT24039 | Kunal Oberoi  |          70.00 | 21 / 30 sessions  | At-Risk (< 75%) |
-+------------+---------+---------------+----------------+-------------------+-----------------+
++------------+---------+---------------+----------------+-----------------+
+| student_id | usn     | name          | attendance (%) | Status          |
++------------+---------+---------------+----------------+-----------------+
+|         83 | UT24083 | Ananya Singh  |          33.33 | Critical (< 75%)|
+|         93 | UT22093 | Saanvi Singh  |          33.33 | Critical (< 75%)|
+|         98 | UT23098 | Zoya Singh    |          33.33 | Critical (< 75%)|
+|         22 | UT23022 | Aditya Rao    |          40.00 | Critical (< 75%)|
+|         78 | UT23078 | Zoya Singh    |          40.00 | Critical (< 75%)|
+|         27 | UT24027 | Isha Rao      |          50.00 | At-Risk (< 75%) |
+|         48 | UT25048 | Kavya Singh   |          50.00 | At-Risk (< 75%) |
+|         13 | UT22013 | Saanvi Singh  |          57.14 | At-Risk (< 75%) |
+|         15 | UT24015 | Tanvi Mishra  |          57.14 | At-Risk (< 75%) |
++------------+---------+---------------+----------------+-----------------+
 ```
 <p align="center"><img src="queries/screenshots/q5_output.png" alt="Q5 Screenshot" width="70%"/></p>
 
-* **Finding:** Exactly 5 students fall below the university 75% threshold in the verified 2,500-session dataset, ranging from 50.00% (Isha Gupta, 15/30) to 70.00% (Gaurav Sen, Kunal Oberoi), enabling timely intervention.
+* **Finding:** Enforces statutory university policy requiring $\ge 75\%$ class attendance for semester examination eligibility. Students falling below the cutoff start at **33.33%** (`Ananya Singh`, `Saanvi Singh`, `Zoya Singh`), followed by **40.00%** (`Aditya Rao`, `Zoya Singh`), **50.00%** (`Isha Rao`, `Kavya Singh`), and **57.14%** (`Saanvi Singh`, `Tanvi Mishra`), enabling timely academic counseling and intervention.
 
 ---
 
@@ -659,4 +663,3 @@ This project was developed by **Team 4**:
 ## 📄 License & Academic Integrity
 
 This project is licensed for educational and academic evaluation under the **Database Management Systems Course Curriculum**. All schemas, SQL scripts, normalization proofs, and analytical query implementations represent the authentic, collaborative work of **Team 4**.
-

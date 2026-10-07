@@ -11,7 +11,7 @@
 
 ## 1. Overview & Logical Design
 
-The UniTrack database is designed as a fully normalized relational database implemented on **MySQL 8.0+ / InnoDB Engine**. Each entity identified in the conceptual ER diagram is mapped directly to a relational table. Primary keys uniquely identify individual records, while foreign keys establish deterministic relationships and preserve referential integrity across the system.
+The UniTrack database is designed implemented on **MySQL 8.0+ / InnoDB Engine**. Each entity identified in the conceptual ER diagram is mapped directly to a relational table. Primary keys uniquely identify individual records, while foreign keys establish deterministic relationships and preserve referential integrity across the system.
 
 Below is the complete entity-relational specification for all 11 tables:
 
@@ -263,11 +263,9 @@ All 14 relationships established in the conceptual Chen ER diagram are mapped lo
 
 The physical schema is implemented in [`schema/create_tables.sql`](create_tables.sql). The script follows strict sequential stages:
 1. `DROP DATABASE IF EXISTS unitrack;` & `CREATE DATABASE unitrack;`
-2. Creation of standalone/parent entities (`DEPARTMENT`, `PROGRAM`, `FACULTY`, `COURSE`, `CLASSROOM`, `STUDENT`).
-3. Creation of dependent offering and bridge entities (`COURSE_OFFERING`, `ENROLLMENT`).
-4. Creation of leaf transaction entities (`ATTENDANCE`, `ASSIGNMENT`, `SUBMISSION`).
-5. Execution of `ALTER TABLE DEPARTMENT ADD CONSTRAINT fk_department_hod`.
-6. Verification commands: `SHOW TABLES;` and table row count audits.
+2. Creation of entities (`DEPARTMENT`, `PROGRAM`, `FACULTY`, `COURSE`, `CLASSROOM`, `STUDENT`, `COURSE_OFFERING`, `ENROLLMENT`, `ATTENDANCE`, `ASSIGNMENT`, `SUBMISSION`).
+3. Execution of `ALTER TABLE DEPARTMENT ADD CONSTRAINT fk_department_hod`.
+4. Verification commands: `SHOW TABLES;` and table row count audits.
 
 ---
-*Report authored by **K. Jyoshna** (`AU25UG-026`) — Logical Designer & DDL Engineer.*
+*Report authored by **K. Jyoshna** (`AU25UG-026`) .*

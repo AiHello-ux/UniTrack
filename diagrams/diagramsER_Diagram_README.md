@@ -68,18 +68,9 @@ The diagram represents the following relationships:
 | ASSIGNMENT — Receives — SUBMISSION | 1:M | An assignment may receive multiple submissions. |
 | STUDENT — Submits — SUBMISSION | 1:M | A student may submit multiple assignments. |
 
-The conceptual many-to-many relationship between **STUDENT** and **COURSE_OFFERING** is represented through **ENROLLMENT**. The relationship between students and assignments is represented through **SUBMISSION**.
 
-## 5. Participation Constraints
 
-Participation describes whether an entity must take part in a relationship:
-
-- **Total participation:** every instance of the entity must participate in the relationship.
-- **Partial participation:** an instance may exist without participating in the relationship.
-
-In this diagram, the connectors are shown as single lines, so participation constraints are documented here rather than distinguished graphically. For example, every enrollment must refer to a student and a course offering, while a student may exist before registering for a course offering.
-
-## 6. ER Diagram Notation
+## 5. ER Diagram Notation
 
 - **Rectangle:** entity
 - **Diamond:** relationship
@@ -90,4 +81,4 @@ In this diagram, the connectors are shown as single lines, so participation cons
 
 ## 7. My Contribution
 
-My contribution to UniTrack was the **conceptual ER diagram**. I identified the entities and their attributes, marked the key attributes, and represented the relationships, cardinalities, and participation constraints between the entities. I also checked that the diagram represented the academic requirements of the UniTrack system.
+My contribution to UniTrack was the **conceptual ER diagram**. I identified the entities and their attributes, marked the key attributes, and represented the relationships, cardinalities. 

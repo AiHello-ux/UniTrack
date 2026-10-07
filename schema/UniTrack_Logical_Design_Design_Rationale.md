@@ -188,24 +188,7 @@ Represents individual student submissions against designated coursework assignme
 
 ---
 
-### 2.3. Direct Attendance Linking via Enrollment Bridge
-- **Design Decision:** `ATTENDANCE` references `ENROLLMENT(enrollment_id)` rather than storing composite `(student_id, offering_id, class_date)`.
-- **Rationale:**
-  - If `ATTENDANCE` referenced `STUDENT` and `COURSE_OFFERING` independently, an application bug or rogue query could insert an attendance log for a student in a course offering they were never registered in.
-  - By referencing `ENROLLMENT.enrollment_id`, the database engine physically guarantees that an attendance record can only exist for a student who possesses an active, valid enrollment row.
-
----
-
-### 2.4. Surrogate Primary Keys vs. Composite Natural Keys
-- **Design Decision:** All 11 relations utilize single-column integer surrogate primary keys (`table_id`), combined with explicit `UNIQUE` candidate key constraints where natural uniqueness exists (e.g., `STUDENT.usn`, `COURSE.code`, `FACULTY.email`, `(student_id, offering_id)`).
-- **Rationale:**
-  - **Index Efficiency:** In MySQL's InnoDB storage engine, secondary indexes store the clustered index key. Using compact integer primary keys minimizes B-tree index depth and I/O overhead.
-  - **Foreign Key Join Performance:** Joining on a single 4-byte integer `enrollment_id` is vastly faster than multi-column composite joins on `(student_id, offering_id)`.
-  - **Cascading Stability:** Natural keys like email addresses or roll numbers occasionally undergo institutional reformatting. Isolating primary keys from business values prevents massive cascading updates across child rows.
-
----
-
-### 2.5. Default Constraints for Academic Workflows
+### 23.. Default Constraints for Academic Workflows
 - **Design Decision:** Incorporating standard default values for key attributes:
   - `PROGRAM.duration_years`: `DEFAULT 4` (standard undergraduate bachelor's degree duration).
   - `COURSE.credits`: `DEFAULT 3` (standard lecture credit weight).

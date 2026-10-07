@@ -3,7 +3,7 @@
 -- Author: K. Jyoshna (AU25UG-026)
 -- Role: Logical Designer & DDL Engineer
 -- Target RDBMS: MySQL 8.0+ / InnoDB Engine
--- Total Tables: 11 Normalized Relations (3NF Compliant)
+-- Total Tables: 11 
 -- ============================================================================
 
 -- 1. REMOVE OLD DATABASE
